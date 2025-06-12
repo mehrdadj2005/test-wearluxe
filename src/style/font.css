@@ -1,0 +1,35 @@
+@font-face {
+  font-family: iran_sans_black;
+  src: url(/font/IRANSANSXFANUM-BLACK.TTF);
+  font-weight: bold;
+}
+@font-face {
+  font-family: iran_sans_bold;
+  src: url(/font/IRANSANSXFANUM-BOLD.TTF);
+  font-weight: bold;
+}
+@font-face {
+  font-family: iran_sans_extrabold;
+  src: url(/font/IRANSANSXFANUM-EXTRABOLD.TTF);
+  font-weight: bold;
+}
+@font-face {
+  font-family: iran_sans_light;
+  src: url(/font/IRANSANSXFANUM-LIGHT.TTF);
+  font-weight: bold;
+}
+@font-face {
+  font-family: iran_sans_medium;
+  src: url(/font/IRANSANSXFANUM-MEDIUM.TTF);
+  font-weight: bold;
+}
+@font-face {
+  font-family: iran_sans_regular;
+  src: url(/font/IRANSANSXFANUM-REGULAR.TTF);
+  font-weight: bold;
+}
+@font-face {
+  font-family: iran_sans_thin;
+  src: url(/font/IRANSANSXFANUM-THIN.TTF);
+  font-weight: bold;
+}

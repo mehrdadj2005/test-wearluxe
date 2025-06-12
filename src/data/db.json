@@ -1,0 +1,2792 @@
+{
+  "banners": [{
+    "alt": "Landing Banner",
+    "id": "landing-baner",
+    "src": "/images/landing-baner.jpeg"
+  }],
+  "categories": [{
+      "id": "1",
+      "slug": "pants",
+      "title": "شلوار"
+    },
+    {
+      "id": "2",
+      "slug": "shirts",
+      "title": "پیراهن"
+    },
+    {
+      "id": "3",
+      "slug": "caps",
+      "title": "کلاه"
+    },
+    {
+      "id": "4",
+      "slug": "sets",
+      "title": "ست"
+    }
+  ],
+  "options": [{
+      "id": "option-1",
+      "name": "ارسال سریع",
+      "src": "/images/fast-car.png"
+    },
+    {
+      "id": "option-3",
+      "name": "امکان بازگشت کالا",
+      "src": "/images/box.svg"
+    },
+    {
+      "id": "option-2",
+      "name": "امکان پرداخت در محل",
+      "src": "/images/card.png"
+    },
+    {
+      "id": "option-4",
+      "name": "پشتیبانی 24 ساعته",
+      "src": "/images/clock.svg"
+    }
+  ],
+  "orders": [{
+    "id": "o1",
+    "products": [{
+        "productId": "101",
+        "quantity": 2
+      },
+      {
+        "productId": "201",
+        "quantity": 1
+      }
+    ],
+    "status": "processing",
+    "total": 860000,
+    "userId": "u1"
+  }],
+  "products": [{
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "black",
+      "colors": [
+        "مشکی",
+        "آبی",
+        "طوسی"
+      ],
+      "description": "این شلوار بسیار راحت و مناسب برای استفاده روزانه است.",
+      "discountedPercentage": 85,
+      "discountedPrice": 977500,
+      "id": "1001",
+      "images": [
+        "/images/hero03.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "پنبه",
+      "name": "شلوار جین مردانه",
+      "price": 1150000,
+      "publishTime": "2024/10/09-00/29/14",
+      "publishTimeSort": "2024-10-09T00:29:14",
+      "rating": 4.2,
+      "sales": 1,
+      "size": "33",
+      "sizes": {
+        "30": {
+          "dimensions": {
+            "height": 100,
+            "width": 40
+          },
+          "stock": true
+        },
+        "31": {
+          "dimensions": {
+            "height": 101,
+            "width": 41
+          },
+          "stock": false
+        },
+        "32": {
+          "dimensions": {
+            "height": 102,
+            "width": 42
+          },
+          "stock": true
+        },
+        "33": {
+          "dimensions": {
+            "height": 103,
+            "width": 43
+          },
+          "stock": true
+        },
+        "34": {
+          "dimensions": {
+            "height": 104,
+            "width": 44
+          },
+          "stock": false
+        },
+        "35": {
+          "dimensions": {
+            "height": 105,
+            "width": 45
+          },
+          "stock": true
+        },
+        "36": {
+          "dimensions": {
+            "height": 106,
+            "width": 46
+          },
+          "stock": false
+        },
+        "37": {
+          "dimensions": {
+            "height": 107,
+            "width": 47
+          },
+          "stock": true
+        },
+        "38": {
+          "dimensions": {
+            "height": 108,
+            "width": 48
+          },
+          "stock": false
+        },
+        "39": {
+          "dimensions": {
+            "height": 109,
+            "width": 49
+          },
+          "stock": true
+        },
+        "40": {
+          "dimensions": {
+            "height": 110,
+            "width": 50
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-1",
+      "stock": true,
+      "type": "مام فیت"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "yellow",
+      "colors": [
+        "زرد",
+        "سبز",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای ورزشکاران و فعالیت های بدنی است.",
+      "discountedPercentage": 10,
+      "discountedPrice": 60000,
+      "id": "4001",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست ورزشی تابستانی",
+      "price": 600000,
+      "publishTime": "2024/10/10-10/15/20",
+      "publishTimeSort": "2024-10-10T10:15:20",
+      "rating": 4.5,
+      "sales": 2,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 99,
+            "width": 42
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 97,
+            "width": 40
+          },
+          "stock": false
+        },
+        "S": {
+          "dimensions": {
+            "height": 95,
+            "width": 38
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 101,
+            "width": 44
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 103,
+            "width": 46
+          },
+          "stock": false
+        },
+        "XXXL": {
+          "dimensions": {
+            "height": 105,
+            "width": 48
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-2",
+      "stock": false,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "cream",
+      "colors": [
+        "کرم",
+        "سفید",
+        "آبی"
+      ],
+      "description": "کلاه بافتنی گرم و نرم مناسب برای فصل های سرد است.",
+      "discountedPercentage": 7,
+      "discountedPrice": 21000,
+      "id": "3001",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "پشم",
+      "name": "کلاه بافتنی زمستانی",
+      "price": 300000,
+      "publishTime": "2024/10/11-12/00/00",
+      "publishTimeSort": "2024-10-11T12:00:00",
+      "rating": 4.7,
+      "sales": 3,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 17,
+            "width": 24
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 16,
+            "width": 22
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 15,
+            "width": 20
+          },
+          "stock": false
+        },
+        "XL": {
+          "dimensions": {
+            "height": 18,
+            "width": 26
+          },
+          "stock": false
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 19,
+            "width": 28
+          },
+          "stock": true
+        },
+        "XXXL": {
+          "dimensions": {
+            "height": 20,
+            "width": 30
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-3",
+      "stock": false,
+      "type": "بافتنی"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "red",
+      "colors": [
+        "قرمز",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه شیک و مناسب برای مجالس رسمی می باشد.",
+      "discountedPercentage": 15,
+      "discountedPrice": 150000,
+      "id": "2001",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero02.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه رسمی",
+      "price": 1000000,
+      "publishTime": "2024/10/12-09/30/00",
+      "publishTimeSort": "2024-10-12T09:30:00",
+      "rating": 4.3,
+      "sales": 4,
+      "size": "XXXL",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 74,
+            "width": 42
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 72,
+            "width": 40
+          },
+          "stock": false
+        },
+        "S": {
+          "dimensions": {
+            "height": 70,
+            "width": 38
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 76,
+            "width": 44
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 78,
+            "width": 46
+          },
+          "stock": false
+        },
+        "XXXL": {
+          "dimensions": {
+            "height": 80,
+            "width": 48
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-4",
+      "stock": false,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "blue",
+      "colors": [
+        "آبی",
+        "مشکی",
+        "سبز"
+      ],
+      "description": "شلوار جین مناسب برای استایل روزمره و راحتی.",
+      "discountedPercentage": 20,
+      "discountedPrice": 800000,
+      "id": "1002",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero03.jpg"
+      ],
+      "material": "جین",
+      "name": "شلوار جین آبی",
+      "price": 1000000,
+      "publishTime": "2024/10/13-11/00/00",
+      "publishTimeSort": "2024-10-13T11:00:00",
+      "rating": 4.1,
+      "sales": 5,
+      "size": "32",
+      "sizes": {
+        "30": {
+          "dimensions": {
+            "height": 101,
+            "width": 41
+          },
+          "stock": true
+        },
+        "32": {
+          "dimensions": {
+            "height": 103,
+            "width": 43
+          },
+          "stock": true
+        },
+        "34": {
+          "dimensions": {
+            "height": 105,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-5",
+      "stock": false,
+      "type": "اسلیم فیت"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "green",
+      "colors": [
+        "سبز",
+        "زرد",
+        "آبی"
+      ],
+      "description": "ست تابستانی مناسب برای ورزش و پیاده‌روی.",
+      "discountedPercentage": 12,
+      "discountedPrice": 528000,
+      "id": "4002",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "نخ",
+      "name": "ست تابستانی مردانه",
+      "price": 600000,
+      "publishTime": "2024/10/14-09/00/00",
+      "publishTimeSort": "2024-10-14T09:00:00",
+      "rating": 4,
+      "sales": 3,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 98,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 96,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-6",
+      "stock": false,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "white",
+      "colors": [
+        "سفید",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "کلاه تابستانی سبک و خنک.",
+      "discountedPercentage": 5,
+      "discountedPrice": 95000,
+      "id": "3002",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero03.jpg"
+      ],
+      "material": "پنبه",
+      "name": "کلاه تابستانی",
+      "price": 100000,
+      "publishTime": "2024/10/15-08/00/00",
+      "publishTimeSort": "2024-10-15T08:00:00",
+      "rating": 4.6,
+      "sales": 2,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 16,
+            "width": 21
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-7",
+      "stock": true,
+      "type": "کپ"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "blue",
+      "colors": [
+        "آبی",
+        "سفید",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای محیط کار.",
+      "discountedPercentage": 18,
+      "discountedPrice": 820000,
+      "id": "2002",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه آبی",
+      "price": 1000000,
+      "publishTime": "2024/10/16-10/00/00",
+      "publishTimeSort": "2024-10-16T10:00:00",
+      "rating": 4.4,
+      "sales": 6,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 74,
+            "width": 43
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 72,
+            "width": 41
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 76,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-8",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "gray",
+      "colors": [
+        "طوسی",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار راحتی مناسب برای خانه و ورزش.",
+      "discountedPercentage": 25,
+      "discountedPrice": 600000,
+      "id": "1003",
+      "images": [
+        "/images/hero05.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "شلوار راحتی مردانه",
+      "price": 800000,
+      "publishTime": "2024/10/17-12/00/00",
+      "publishTimeSort": "2024-10-17T12:00:00",
+      "rating": 4,
+      "sales": 4,
+      "size": "34",
+      "sizes": {
+        "32": {
+          "dimensions": {
+            "height": 102,
+            "width": 42
+          },
+          "stock": true
+        },
+        "34": {
+          "dimensions": {
+            "height": 104,
+            "width": 44
+          },
+          "stock": true
+        },
+        "36": {
+          "dimensions": {
+            "height": 106,
+            "width": 46
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-9",
+      "stock": false,
+      "type": "راحتی"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "red",
+      "colors": [
+        "قرمز",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "ست ورزشی مناسب برای دویدن.",
+      "discountedPercentage": 8,
+      "discountedPrice": 552000,
+      "id": "4003",
+      "images": [
+        "/images/hero03.jpg",
+        "/images/hero02.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست ورزشی مردانه",
+      "price": 600000,
+      "publishTime": "2024/10/18-13/00/00",
+      "publishTimeSort": "2024-10-18T13:00:00",
+      "rating": 4.3,
+      "sales": 7,
+      "size": "XL",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 102,
+            "width": 45
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 104,
+            "width": 47
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-10",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "blue",
+      "colors": [
+        "آبی",
+        "سفید",
+        "قرمز"
+      ],
+      "description": "کلاه اسپرت مناسب برای ورزش.",
+      "discountedPercentage": 10,
+      "discountedPrice": 90000,
+      "id": "3003",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "پنبه",
+      "name": "کلاه اسپرت",
+      "price": 100000,
+      "publishTime": "2024/10/19-14/00/00",
+      "publishTimeSort": "2024-10-19T14:00:00",
+      "rating": 4.2,
+      "sales": 1,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 19,
+            "width": 27
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-11",
+      "stock": false,
+      "type": "کپ"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "white",
+      "colors": [
+        "سفید",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "پیراهن مردانه مناسب برای تابستان.",
+      "discountedPercentage": 22,
+      "discountedPrice": 780000,
+      "id": "2003",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه سفید",
+      "price": 1000000,
+      "publishTime": "2024/10/20-15/00/00",
+      "publishTimeSort": "2024-10-20T15:00:00",
+      "rating": 4.5,
+      "sales": 8,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 75,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 73,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 71,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-12",
+      "stock": false,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "navy",
+      "colors": [
+        "سرمه‌ای",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار پارچه‌ای مناسب برای مجالس رسمی.",
+      "discountedPercentage": 30,
+      "discountedPrice": 700000,
+      "id": "1004",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پشم",
+      "name": "شلوار پارچه‌ای مردانه",
+      "price": 1000000,
+      "publishTime": "2024/10/21-16/00/00",
+      "publishTimeSort": "2024-10-21T16:00:00",
+      "rating": 4.7,
+      "sales": 9,
+      "size": "36",
+      "sizes": {
+        "34": {
+          "dimensions": {
+            "height": 104,
+            "width": 44
+          },
+          "stock": true
+        },
+        "36": {
+          "dimensions": {
+            "height": 106,
+            "width": 46
+          },
+          "stock": true
+        },
+        "38": {
+          "dimensions": {
+            "height": 108,
+            "width": 48
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-13",
+      "stock": false,
+      "type": "راسته"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "black",
+      "colors": [
+        "مشکی",
+        "قرمز",
+        "آبی"
+      ],
+      "description": "ست ورزشی مناسب برای باشگاه.",
+      "discountedPercentage": 15,
+      "discountedPrice": 510000,
+      "id": "4004",
+      "images": [
+        "/images/hero05.jpg",
+        "/images/hero03.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست باشگاهی مردانه",
+      "price": 600000,
+      "publishTime": "2024/10/22-17/00/00",
+      "publishTimeSort": "2024-10-22T17:00:00",
+      "rating": 4.1,
+      "sales": 10,
+      "size": "XXL",
+      "sizes": {
+        "XL": {
+          "dimensions": {
+            "height": 102,
+            "width": 45
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 104,
+            "width": 47
+          },
+          "stock": true
+        },
+        "XXXL": {
+          "dimensions": {
+            "height": 106,
+            "width": 49
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-14",
+      "stock": false,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "red",
+      "colors": [
+        "قرمز",
+        "آبی",
+        "سفید"
+      ],
+      "description": "کلاه زمستانی گرم و راحت.",
+      "discountedPercentage": 12,
+      "discountedPrice": 88000,
+      "id": "3004",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero02.jpg"
+      ],
+      "material": "پشم",
+      "name": "کلاه زمستانی",
+      "price": 100000,
+      "publishTime": "2024/10/23-18/00/00",
+      "publishTimeSort": "2024-10-23T18:00:00",
+      "rating": 4.8,
+      "sales": 11,
+      "size": "XL",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 19,
+            "width": 27
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 20,
+            "width": 29
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-15",
+      "stock": true,
+      "type": "بافتنی"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "green",
+      "colors": [
+        "سبز",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای مهمانی.",
+      "discountedPercentage": 10,
+      "discountedPrice": 900000,
+      "id": "2004",
+      "images": [
+        "/images/hero03.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه سبز",
+      "price": 1000000,
+      "publishTime": "2024/10/24-19/00/00",
+      "publishTimeSort": "2024-10-24T19:00:00",
+      "rating": 4.2,
+      "sales": 12,
+      "size": "S",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 75,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 73,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 71,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-16",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "brown",
+      "colors": [
+        "قهوه‌ای",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار پارچه‌ای مناسب برای محیط کار.",
+      "discountedPercentage": 18,
+      "discountedPrice": 820000,
+      "id": "1005",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پشم",
+      "name": "شلوار پارچه‌ای قهوه‌ای",
+      "price": 1000000,
+      "publishTime": "2024/10/25-20/00/00",
+      "publishTimeSort": "2024-10-25T20:00:00",
+      "rating": 4.3,
+      "sales": 13,
+      "size": "38",
+      "sizes": {
+        "36": {
+          "dimensions": {
+            "height": 106,
+            "width": 46
+          },
+          "stock": true
+        },
+        "38": {
+          "dimensions": {
+            "height": 108,
+            "width": 48
+          },
+          "stock": true
+        },
+        "40": {
+          "dimensions": {
+            "height": 110,
+            "width": 50
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-17",
+      "stock": false,
+      "type": "راسته"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "white",
+      "colors": [
+        "سفید",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای پیاده‌روی.",
+      "discountedPercentage": 20,
+      "discountedPrice": 480000,
+      "id": "4005",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست پیاده‌روی مردانه",
+      "price": 600000,
+      "publishTime": "2024/10/26-21/00/00",
+      "publishTimeSort": "2024-10-26T21:00:00",
+      "rating": 4,
+      "sales": 14,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 98,
+            "width": 41
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 102,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-18",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "gray",
+      "colors": [
+        "طوسی",
+        "آبی",
+        "سفید"
+      ],
+      "description": "کلاه اسپرت مناسب برای دویدن.",
+      "discountedPercentage": 7,
+      "discountedPrice": 93000,
+      "id": "3005",
+      "images": [
+        "/images/hero05.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پنبه",
+      "name": "کلاه اسپرت طوسی",
+      "price": 100000,
+      "publishTime": "2024/10/27-22/00/00",
+      "publishTimeSort": "2024-10-27T22:00:00",
+      "rating": 4.4,
+      "sales": 15,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 16,
+            "width": 21
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-19",
+      "stock": true,
+      "type": "کپ"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "yellow",
+      "colors": [
+        "زرد",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای تابستان.",
+      "discountedPercentage": 14,
+      "discountedPrice": 860000,
+      "id": "2005",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero03.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه زرد",
+      "price": 1000000,
+      "publishTime": "2024/10/28-23/00/00",
+      "publishTimeSort": "2024-10-28T23:00:00",
+      "rating": 4.1,
+      "sales": 16,
+      "size": "XL",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 74,
+            "width": 43
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 76,
+            "width": 45
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 78,
+            "width": 47
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-20",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "green",
+      "colors": [
+        "سبز",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار راحتی مناسب برای ورزش.",
+      "discountedPercentage": 22,
+      "discountedPrice": 780000,
+      "id": "1006",
+      "images": [
+        "/images/hero03.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "شلوار راحتی سبز",
+      "price": 1000000,
+      "publishTime": "2024/10/29-08/00/00",
+      "publishTimeSort": "2024-10-29T08:00:00",
+      "rating": 4.5,
+      "sales": 17,
+      "size": "40",
+      "sizes": {
+        "38": {
+          "dimensions": {
+            "height": 108,
+            "width": 48
+          },
+          "stock": true
+        },
+        "40": {
+          "dimensions": {
+            "height": 110,
+            "width": 50
+          },
+          "stock": true
+        },
+        "42": {
+          "dimensions": {
+            "height": 112,
+            "width": 52
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-21",
+      "stock": true,
+      "type": "راحتی"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "blue",
+      "colors": [
+        "آبی",
+        "زرد",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای ورزشکاران.",
+      "discountedPercentage": 18,
+      "discountedPrice": 492000,
+      "id": "4006",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست ورزشی آبی",
+      "price": 600000,
+      "publishTime": "2024/10/30-09/00/00",
+      "publishTimeSort": "2024-10-30T09:00:00",
+      "rating": 4.2,
+      "sales": 18,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 98,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 96,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-22",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "yellow",
+      "colors": [
+        "زرد",
+        "آبی",
+        "سفید"
+      ],
+      "description": "کلاه تابستانی مناسب برای پیاده‌روی.",
+      "discountedPercentage": 6,
+      "discountedPrice": 94000,
+      "id": "3006",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "پنبه",
+      "name": "کلاه تابستانی زرد",
+      "price": 100000,
+      "publishTime": "2024/10/31-10/00/00",
+      "publishTimeSort": "2024-10-31T10:00:00",
+      "rating": 4.3,
+      "sales": 19,
+      "size": "S",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 16,
+            "width": 21
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-23",
+      "stock": true,
+      "type": "کپ"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "gray",
+      "colors": [
+        "طوسی",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای محیط کار.",
+      "discountedPercentage": 16,
+      "discountedPrice": 840000,
+      "id": "2006",
+      "images": [
+        "/images/hero05.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه طوسی",
+      "price": 1000000,
+      "publishTime": "2024/11/01-11/00/00",
+      "publishTimeSort": "2024-11-01T11:00:00",
+      "rating": 4,
+      "sales": 20,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 74,
+            "width": 43
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 72,
+            "width": 41
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 76,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-24",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "cream",
+      "colors": [
+        "کرم",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار پارچه‌ای مناسب برای تابستان.",
+      "discountedPercentage": 12,
+      "discountedPrice": 880000,
+      "id": "1007",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero02.jpg"
+      ],
+      "material": "پنبه",
+      "name": "شلوار پارچه‌ای کرم",
+      "price": 1000000,
+      "publishTime": "2024/11/02-12/00/00",
+      "publishTimeSort": "2024-11-02T12:00:00",
+      "rating": 4.6,
+      "sales": 21,
+      "size": "32",
+      "sizes": {
+        "30": {
+          "dimensions": {
+            "height": 101,
+            "width": 41
+          },
+          "stock": true
+        },
+        "32": {
+          "dimensions": {
+            "height": 103,
+            "width": 43
+          },
+          "stock": true
+        },
+        "34": {
+          "dimensions": {
+            "height": 105,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-25",
+      "stock": true,
+      "type": "اسلیم فیت"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "gray",
+      "colors": [
+        "طوسی",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای باشگاه.",
+      "discountedPercentage": 14,
+      "discountedPrice": 516000,
+      "id": "4007",
+      "images": [
+        "/images/hero03.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست باشگاهی طوسی",
+      "price": 600000,
+      "publishTime": "2024/11/03-13/00/00",
+      "publishTimeSort": "2024-11-03T13:00:00",
+      "rating": 4.1,
+      "sales": 22,
+      "size": "XL",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 102,
+            "width": 45
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 104,
+            "width": 47
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-26",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "brown",
+      "colors": [
+        "قهوه‌ای",
+        "آبی",
+        "سفید"
+      ],
+      "description": "کلاه زمستانی مناسب برای فصل سرما.",
+      "discountedPercentage": 8,
+      "discountedPrice": 92000,
+      "id": "3007",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پشم",
+      "name": "کلاه زمستانی قهوه‌ای",
+      "price": 100000,
+      "publishTime": "2024/11/04-14/00/00",
+      "publishTimeSort": "2024-11-04T14:00:00",
+      "rating": 4.7,
+      "sales": 23,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 19,
+            "width": 27
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-27",
+      "stock": true,
+      "type": "بافتنی"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "brown",
+      "colors": [
+        "قهوه‌ای",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای پاییز.",
+      "discountedPercentage": 13,
+      "discountedPrice": 870000,
+      "id": "2007",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه قهوه‌ای",
+      "price": 1000000,
+      "publishTime": "2024/11/05-15/00/00",
+      "publishTimeSort": "2024-11-05T15:00:00",
+      "rating": 4.2,
+      "sales": 24,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 75,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 73,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 71,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-28",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "red",
+      "colors": [
+        "قرمز",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار جین مناسب برای استایل اسپرت.",
+      "discountedPercentage": 19,
+      "discountedPrice": 810000,
+      "id": "1008",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "جین",
+      "name": "شلوار جین قرمز",
+      "price": 1000000,
+      "publishTime": "2024/11/06-16/00/00",
+      "publishTimeSort": "2024-11-06T16:00:00",
+      "rating": 4.4,
+      "sales": 25,
+      "size": "34",
+      "sizes": {
+        "32": {
+          "dimensions": {
+            "height": 102,
+            "width": 42
+          },
+          "stock": true
+        },
+        "34": {
+          "dimensions": {
+            "height": 104,
+            "width": 44
+          },
+          "stock": true
+        },
+        "36": {
+          "dimensions": {
+            "height": 106,
+            "width": 46
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-29",
+      "stock": true,
+      "type": "اسلیم فیت"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "brown",
+      "colors": [
+        "قهوه‌ای",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای پاییز.",
+      "discountedPercentage": 17,
+      "discountedPrice": 498000,
+      "id": "4008",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست پاییزی مردانه",
+      "price": 600000,
+      "publishTime": "2024/11/07-17/00/00",
+      "publishTimeSort": "2024-11-07T17:00:00",
+      "rating": 4.3,
+      "sales": 26,
+      "size": "XXL",
+      "sizes": {
+        "XL": {
+          "dimensions": {
+            "height": 102,
+            "width": 45
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 104,
+            "width": 47
+          },
+          "stock": true
+        },
+        "XXXL": {
+          "dimensions": {
+            "height": 106,
+            "width": 49
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-30",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "navy",
+      "colors": [
+        "سرمه‌ای",
+        "آبی",
+        "سفید"
+      ],
+      "description": "کلاه اسپرت مناسب برای ورزش.",
+      "discountedPercentage": 9,
+      "discountedPrice": 91000,
+      "id": "3008",
+      "images": [
+        "/images/hero03.jpg",
+        "/images/hero02.jpg"
+      ],
+      "material": "پنبه",
+      "name": "کلاه اسپرت سرمه‌ای",
+      "price": 100000,
+      "publishTime": "2024/11/08-18/00/00",
+      "publishTimeSort": "2024-11-08T18:00:00",
+      "rating": 4.5,
+      "sales": 27,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 16,
+            "width": 21
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-31",
+      "stock": true,
+      "type": "کپ"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "navy",
+      "colors": [
+        "سرمه‌ای",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای مجالس رسمی.",
+      "discountedPercentage": 11,
+      "discountedPrice": 890000,
+      "id": "2008",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero03.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه سرمه‌ای",
+      "price": 1000000,
+      "publishTime": "2024/11/09-19/00/00",
+      "publishTimeSort": "2024-11-09T19:00:00",
+      "rating": 4.6,
+      "sales": 28,
+      "size": "S",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 75,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 73,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 71,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-32",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "yellow",
+      "colors": [
+        "زرد",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار راحتی مناسب برای تابستان.",
+      "discountedPercentage": 15,
+      "discountedPrice": 850000,
+      "id": "1009",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "پنبه",
+      "name": "شلوار راحتی زرد",
+      "price": 1000000,
+      "publishTime": "2024/11/10-20/00/00",
+      "publishTimeSort": "2024-11-10T20:00:00",
+      "rating": 4.2,
+      "sales": 29,
+      "size": "36",
+      "sizes": {
+        "34": {
+          "dimensions": {
+            "height": 104,
+            "width": 44
+          },
+          "stock": true
+        },
+        "36": {
+          "dimensions": {
+            "height": 106,
+            "width": 46
+          },
+          "stock": true
+        },
+        "38": {
+          "dimensions": {
+            "height": 108,
+            "width": 48
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-33",
+      "stock": true,
+      "type": "راحتی"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "navy",
+      "colors": [
+        "سرمه‌ای",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای ورزشکاران.",
+      "discountedPercentage": 13,
+      "discountedPrice": 522000,
+      "id": "4009",
+      "images": [
+        "/images/hero05.jpg",
+        "/images/hero03.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست ورزشی سرمه‌ای",
+      "price": 600000,
+      "publishTime": "2024/11/11-21/00/00",
+      "publishTimeSort": "2024-11-11T21:00:00",
+      "rating": 4.4,
+      "sales": 30,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 98,
+            "width": 41
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 102,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-34",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "green",
+      "colors": [
+        "سبز",
+        "آبی",
+        "سفید"
+      ],
+      "description": "کلاه تابستانی مناسب برای ورزش.",
+      "discountedPercentage": 5,
+      "discountedPrice": 95000,
+      "id": "3009",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پنبه",
+      "name": "کلاه تابستانی سبز",
+      "price": 100000,
+      "publishTime": "2024/11/12-22/00/00",
+      "publishTimeSort": "2024-11-12T22:00:00",
+      "rating": 4.1,
+      "sales": 31,
+      "size": "XL",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 19,
+            "width": 27
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 20,
+            "width": 29
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-35",
+      "stock": true,
+      "type": "کپ"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "cream",
+      "colors": [
+        "کرم",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای تابستان.",
+      "discountedPercentage": 12,
+      "discountedPrice": 880000,
+      "id": "2009",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه کرم",
+      "price": 1000000,
+      "publishTime": "2024/11/13-23/00/00",
+      "publishTimeSort": "2024-11-13T23:00:00",
+      "rating": 4.3,
+      "sales": 32,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 75,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 73,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 71,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-36",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "white",
+      "colors": [
+        "سفید",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار پارچه‌ای مناسب برای تابستان.",
+      "discountedPercentage": 10,
+      "discountedPrice": 900000,
+      "id": "1010",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پنبه",
+      "name": "شلوار پارچه‌ای سفید",
+      "price": 1000000,
+      "publishTime": "2024/11/14-08/00/00",
+      "publishTimeSort": "2024-11-14T08:00:00",
+      "rating": 4.5,
+      "sales": 33,
+      "size": "38",
+      "sizes": {
+        "36": {
+          "dimensions": {
+            "height": 106,
+            "width": 46
+          },
+          "stock": true
+        },
+        "38": {
+          "dimensions": {
+            "height": 108,
+            "width": 48
+          },
+          "stock": true
+        },
+        "40": {
+          "dimensions": {
+            "height": 110,
+            "width": 50
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-37",
+      "stock": true,
+      "type": "راسته"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "cream",
+      "colors": [
+        "کرم",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای تابستان.",
+      "discountedPercentage": 16,
+      "discountedPrice": 504000,
+      "id": "4010",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست تابستانی کرم",
+      "price": 600000,
+      "publishTime": "2024/11/15-09/00/00",
+      "publishTimeSort": "2024-11-15T09:00:00",
+      "rating": 4.2,
+      "sales": 34,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 98,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 96,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-38",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "black",
+      "colors": [
+        "مشکی",
+        "آبی",
+        "سفید"
+      ],
+      "description": "کلاه اسپرت مناسب برای ورزش.",
+      "discountedPercentage": 8,
+      "discountedPrice": 92000,
+      "id": "3010",
+      "images": [
+        "/images/hero05.jpg",
+        "/images/hero02.jpg"
+      ],
+      "material": "پنبه",
+      "name": "کلاه اسپرت مشکی",
+      "price": 100000,
+      "publishTime": "2024/11/16-10/00/00",
+      "publishTimeSort": "2024-11-16T10:00:00",
+      "rating": 4.4,
+      "sales": 35,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 19,
+            "width": 27
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-39",
+      "stock": true,
+      "type": "کپ"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "black",
+      "colors": [
+        "مشکی",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "پیراهن مردانه مناسب برای مجالس رسمی.",
+      "discountedPercentage": 15,
+      "discountedPrice": 850000,
+      "id": "2010",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه مشکی",
+      "price": 1000000,
+      "publishTime": "2024/11/17-11/00/00",
+      "publishTimeSort": "2024-11-17T11:00:00",
+      "rating": 4.5,
+      "sales": 36,
+      "size": "XL",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 74,
+            "width": 43
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 76,
+            "width": 45
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 78,
+            "width": 47
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-40",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "blue",
+      "colors": [
+        "آبی",
+        "مشکی",
+        "سبز"
+      ],
+      "description": "شلوار جین مناسب برای استایل روزمره.",
+      "discountedPercentage": 20,
+      "discountedPrice": 800000,
+      "id": "1011",
+      "images": [
+        "/images/hero03.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "جین",
+      "name": "شلوار جین آبی",
+      "price": 1000000,
+      "publishTime": "2024/11/18-12/00/00",
+      "publishTimeSort": "2024-11-18T12:00:00",
+      "rating": 4.1,
+      "sales": 37,
+      "size": "32",
+      "sizes": {
+        "30": {
+          "dimensions": {
+            "height": 101,
+            "width": 41
+          },
+          "stock": true
+        },
+        "32": {
+          "dimensions": {
+            "height": 103,
+            "width": 43
+          },
+          "stock": true
+        },
+        "34": {
+          "dimensions": {
+            "height": 105,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-41",
+      "stock": true,
+      "type": "اسلیم فیت"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "red",
+      "colors": [
+        "قرمز",
+        "آبی",
+        "زرد"
+      ],
+      "description": "ست ورزشی مناسب برای ورزشکاران.",
+      "discountedPercentage": 18,
+      "discountedPrice": 492000,
+      "id": "4011",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست ورزشی قرمز",
+      "price": 600000,
+      "publishTime": "2024/11/19-13/00/00",
+      "publishTimeSort": "2024-11-19T13:00:00",
+      "rating": 4,
+      "sales": 38,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 98,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 96,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-42",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "white",
+      "colors": [
+        "سفید",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "کلاه تابستانی مناسب برای پیاده‌روی.",
+      "discountedPercentage": 6,
+      "discountedPrice": 94000,
+      "id": "3011",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پنبه",
+      "name": "کلاه تابستانی سفید",
+      "price": 100000,
+      "publishTime": "2024/11/20-14/00/00",
+      "publishTimeSort": "2024-11-20T14:00:00",
+      "rating": 4.3,
+      "sales": 39,
+      "size": "S",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 16,
+            "width": 21
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-43",
+      "stock": true,
+      "type": "کپ"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "gray",
+      "colors": [
+        "طوسی",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای محیط کار.",
+      "discountedPercentage": 16,
+      "discountedPrice": 840000,
+      "id": "2011",
+      "images": [
+        "/images/hero05.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه طوسی",
+      "price": 1000000,
+      "publishTime": "2024/11/21-15/00/00",
+      "publishTimeSort": "2024-11-21T15:00:00",
+      "rating": 4,
+      "sales": 40,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 74,
+            "width": 43
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 72,
+            "width": 41
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 76,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-44",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "cream",
+      "colors": [
+        "کرم",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار پارچه‌ای مناسب برای تابستان.",
+      "discountedPercentage": 12,
+      "discountedPrice": 880000,
+      "id": "1012",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero02.jpg"
+      ],
+      "material": "پنبه",
+      "name": "شلوار پارچه‌ای کرم",
+      "price": 1000000,
+      "publishTime": "2024/11/22-16/00/00",
+      "publishTimeSort": "2024-11-22T16:00:00",
+      "rating": 4.6,
+      "sales": 41,
+      "size": "32",
+      "sizes": {
+        "30": {
+          "dimensions": {
+            "height": 101,
+            "width": 41
+          },
+          "stock": true
+        },
+        "32": {
+          "dimensions": {
+            "height": 103,
+            "width": 43
+          },
+          "stock": true
+        },
+        "34": {
+          "dimensions": {
+            "height": 105,
+            "width": 45
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-45",
+      "stock": true,
+      "type": "اسلیم فیت"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "gray",
+      "colors": [
+        "طوسی",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای باشگاه.",
+      "discountedPercentage": 14,
+      "discountedPrice": 516000,
+      "id": "4012",
+      "images": [
+        "/images/hero03.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست باشگاهی طوسی",
+      "price": 600000,
+      "publishTime": "2024/11/23-17/00/00",
+      "publishTimeSort": "2024-11-23T17:00:00",
+      "rating": 4.1,
+      "sales": 42,
+      "size": "XL",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 100,
+            "width": 43
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 102,
+            "width": 45
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 104,
+            "width": 47
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-46",
+      "stock": true,
+      "type": "اسپرت"
+    },
+    {
+      "categoryId": "3",
+      "categoryName": "کلاه",
+      "color": "brown",
+      "colors": [
+        "قهوه‌ای",
+        "آبی",
+        "سفید"
+      ],
+      "description": "کلاه زمستانی مناسب برای فصل سرما.",
+      "discountedPercentage": 8,
+      "discountedPrice": 92000,
+      "id": "3012",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پشم",
+      "name": "کلاه زمستانی قهوه‌ای",
+      "price": 100000,
+      "publishTime": "2024/11/24-18/00/00",
+      "publishTimeSort": "2024-11-24T18:00:00",
+      "rating": 4.7,
+      "sales": 43,
+      "size": "L",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 18,
+            "width": 25
+          },
+          "stock": true
+        },
+        "M": {
+          "dimensions": {
+            "height": 17,
+            "width": 23
+          },
+          "stock": true
+        },
+        "XL": {
+          "dimensions": {
+            "height": 19,
+            "width": 27
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-47",
+      "stock": true,
+      "type": "بافتنی"
+    },
+    {
+      "categoryId": "2",
+      "categoryName": "پیراهن",
+      "color": "brown",
+      "colors": [
+        "قهوه‌ای",
+        "آبی",
+        "مشکی"
+      ],
+      "description": "پیراهن مردانه مناسب برای پاییز.",
+      "discountedPercentage": 13,
+      "discountedPrice": 870000,
+      "id": "2012",
+      "images": [
+        "/images/hero04.jpg",
+        "/images/hero06.jpg"
+      ],
+      "material": "کتان",
+      "name": "پیراهن مردانه قهوه‌ای",
+      "price": 1000000,
+      "publishTime": "2024/11/25-19/00/00",
+      "publishTimeSort": "2024-11-25T19:00:00",
+      "rating": 4.2,
+      "sales": 44,
+      "size": "M",
+      "sizes": {
+        "L": {
+          "dimensions": {
+            "height": 75,
+            "width": 43
+          },
+          "stock": false
+        },
+        "M": {
+          "dimensions": {
+            "height": 73,
+            "width": 41
+          },
+          "stock": true
+        },
+        "S": {
+          "dimensions": {
+            "height": 71,
+            "width": 39
+          },
+          "stock": true
+        }
+      },
+      "slug": "product-48",
+      "stock": true,
+      "type": "کلاسیک"
+    },
+    {
+      "categoryId": "1",
+      "categoryName": "شلوار",
+      "color": "red",
+      "colors": [
+        "قرمز",
+        "مشکی",
+        "آبی"
+      ],
+      "description": "شلوار جین مناسب برای استایل اسپرت.",
+      "discountedPercentage": 19,
+      "discountedPrice": 810000,
+      "id": "1013",
+      "images": [
+        "/images/hero02.jpg",
+        "/images/hero05.jpg"
+      ],
+      "material": "جین",
+      "name": "شلوار جین قرمز",
+      "price": 1000000,
+      "publishTime": "2024/11/26-20/00/00",
+      "publishTimeSort": "2024-11-26T20:00:00",
+      "rating": 4.4,
+      "sales": 45,
+      "size": "34",
+      "sizes": {
+        "32": {
+          "dimensions": {
+            "height": 102,
+            "width": 42
+          },
+          "stock": true
+        },
+        "34": {
+          "dimensions": {
+            "height": 104,
+            "width": 44
+          },
+          "stock": true
+        },
+        "36": {
+          "dimensions": {
+            "height": 106,
+            "width": 46
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-49",
+      "stock": true,
+      "type": "اسلیم فیت"
+    },
+    {
+      "categoryId": "4",
+      "categoryName": "ست",
+      "color": "brown",
+      "colors": [
+        "قهوه‌ای",
+        "آبی",
+        "قرمز"
+      ],
+      "description": "ست ورزشی مناسب برای پاییز.",
+      "discountedPercentage": 17,
+      "discountedPrice": 498000,
+      "id": "4013",
+      "images": [
+        "/images/hero06.jpg",
+        "/images/hero04.jpg"
+      ],
+      "material": "پلی استر",
+      "name": "ست پاییزی مردانه",
+      "price": 600000,
+      "publishTime": "2024/11/27-21/00/00",
+      "publishTimeSort": "2024-11-27T21:00:00",
+      "rating": 4.3,
+      "sales": 46,
+      "size": "XXL",
+      "sizes": {
+        "XL": {
+          "dimensions": {
+            "height": 102,
+            "width": 45
+          },
+          "stock": true
+        },
+        "XXL": {
+          "dimensions": {
+            "height": 104,
+            "width": 47
+          },
+          "stock": true
+        },
+        "XXXL": {
+          "dimensions": {
+            "height": 106,
+            "width": 49
+          },
+          "stock": false
+        }
+      },
+      "slug": "product-50",
+      "stock": true,
+      "type": "اسپرت"
+    }
+  ],
+  "users": [{
+    "email": "ali@example.com",
+    "id": "u1",
+    "lastName": "Rezaei",
+    "name": "Ali",
+    "password": "alipassword123",
+    "userName": "ali-user"
+  }]
+}
