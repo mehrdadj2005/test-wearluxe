@@ -44,24 +44,14 @@ export default function ProductSlider({
           {data[0].categoryName}
         </Typography>
 
-        <Link href={`/products/category/${data[0].categoryId}`}>
-          <Button
-            variant="outlined"
-            // className="!border-neutral-800 !text-neutral-800"
-            sx={{
-              border: "1px solid var(--color-neutral-300)",
-              color: "var(--color-neutral-800)",
-              padding: "6px 28px",
-              ":hover": {
-                border: "1px solid var(--color-neutral-600)",
-                background: "var(--color-neutral-200)",
-              },
-              transition: "all 0.3s ease",
-            }}
-          >
-            مشاهده همه
-          </Button>
-        </Link>
+        {data?.length > 0 && data[0].categoryName && (
+          <Box>
+            <Typography>{data[0].categoryName}</Typography>
+            <Link href={`/products/category/${data[0].categoryId}`}>
+              <Button>مشاهده همه</Button>
+            </Link>
+          </Box>
+        )}
       </Box>
       <Swiper
         spaceBetween={10}
@@ -86,13 +76,14 @@ export default function ProductSlider({
           },
         }}
       >
-        {Array.isArray(data) && data.map((item: IProduct) => (
-          <SwiperSlide key={item.id}>
-            <Link href={`products/${item.id}`}>
-              <ProductCard item={item} />
-            </Link>
-          </SwiperSlide>
-        ))}
+        {Array.isArray(data) &&
+          data.map((item: IProduct) => (
+            <SwiperSlide key={item.id}>
+              <Link href={`products/${item.id}`}>
+                <ProductCard item={item} />
+              </Link>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </Container>
   );
