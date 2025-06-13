@@ -72,7 +72,7 @@ export default async function HomePage() {
           ))}
       </Container>
       <ProductSlider sx={{ pt: "20px" }} data={dataShirts} />
-      {/* <Container>
+      <Container>
         <Box className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 px-8 md:px-16 py-4 md:py-8">
           <CardMedia
             component="img"
@@ -99,7 +99,7 @@ export default async function HomePage() {
             className="h-full rounded-2xl"
           />
         </Box>
-      </Container> */}
+      </Container>
       <ProductSlider sx={{ pt: "20px" }} data={dataCaps} />
       <ProductSlider sx={{ pt: "20px" }} data={dataPants} />
       {landingBaner[0]?.src && (
