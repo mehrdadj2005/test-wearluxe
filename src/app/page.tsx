@@ -102,23 +102,18 @@ export default async function HomePage() {
       </Container>
       <ProductSlider sx={{ pt: "20px" }} data={dataCaps} />
       <ProductSlider sx={{ pt: "20px" }} data={dataPants} />
-      {Array.isArray(landingBaner) &&
-        landingBaner.length > 0 &&
-        landingBaner[0].src && (
-          <Container sx={{ width: "100%", height: "200px", pt: "20px" }}>
-            <CardMedia
-              sx={{
-                borderRadius: "12px",
-                overflow: "hidden",
-                width: "100%",
-                height: "100%",
-              }}
-              component="img"
-              image={landingBaner[0].src}
-              alt={landingBaner[0].alt || "بنر"}
-            />
-          </Container>
-        )}
+      {landingBaner[0]?.src && (
+        <CardMedia
+          component="img"
+          image={landingBaner[0].src}
+          alt={landingBaner[0].alt}
+          sx={{
+            width: "40px",
+            height: "auto",
+            borderRadius: "12px",
+          }}
+        />
+      )}
 
       <ProductSlider sx={{ pt: "20px" }} data={dataSets} />
     </>
