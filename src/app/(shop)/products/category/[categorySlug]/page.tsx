@@ -3,47 +3,31 @@ import ProductDetailsSort from "@/app/(shop)/products/category/[categorySlug]/pr
 import Container from "@/components/container";
 import PaginationWithLinks from "@/components/pagination";
 import ProductCard from "@/components/products/productCard";
-import { getProduct } from "@/services/getProduct";
-import { IProduct } from "@/types/product";
+import { getProducts } from "@/services/getProduct";
 import { Box } from "@mui/material";
 import Link from "next/link";
+
 interface ICategoryPageProps {
-  searchParams: Promise<{ sort: string }>;
-  params: Promise<{ categorySlug: string }>;
+  searchParams: { [key: string]: string };
+  params: { categorySlug: string };
 }
 
 export default async function CategoryPage({
   searchParams,
   params,
 }: ICategoryPageProps) {
-  const url = (await searchParams) as Record<string, string>;
+  const categoryId = params.categorySlug;
+  const page = Number(searchParams.page || 1);
+  const limit = 12;
 
-  let filters = "";
-  for (const i in url) {
-    filters += `${i}=${url[i]}&`;
-  }
+  // دریافت محصولات دسته‌بندی‌شده
+  const allProducts = await getProducts(categoryId);
 
-  const dataLength = await getProduct(
-    `http://localhost:4000/products?categoryId=${(await params).categorySlug}`
-  );
-  const totalPages = Math.ceil((dataLength.data as IProduct[]).length / 12);
-  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  // تعداد کل صفحات
+  const totalPages = Math.ceil(allProducts.length / limit);
 
-  const { data, error } = await getProduct(
-    `http://localhost:4000/products?categoryId=${
-      (
-        await params
-      ).categorySlug
-    }&${filters}&_page=1&_limit=12&`
-  );
-
-  if (error) {
-    return <div>Error loading products</div>;
-  }
-
-  if (!data && !error) {
-    return <div>Loading...</div>;
-  }
+  // صفحه‌بندی دستی
+  const paginatedProducts = allProducts.slice((page - 1) * limit, page * limit);
 
   return (
     <Container
@@ -53,31 +37,12 @@ export default async function CategoryPage({
         pt: 2,
       }}
     >
-      <Box
-        sx={{
-          display: { xs: "none", xl: "flex" },
-        }}
-      >
+      <Box sx={{ display: { xs: "none", xl: "flex" } }}>
         <ProductDetailsFilter showDrawerFilter={false} />
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            gap: 2,
-          }}
-        >
-          <Box
-            sx={{
-              display: { xs: "flex", xl: "none" },
-            }}
-          >
+      <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
+        <Box sx={{ display: "flex", gap: 2 }}>
+          <Box sx={{ display: { xs: "flex", xl: "none" } }}>
             <ProductDetailsFilter showDrawerFilter={false} />
           </Box>
           <ProductDetailsSort showDrawerSort={false} />
@@ -91,16 +56,12 @@ export default async function CategoryPage({
             justifyContent: "flex-start",
           }}
         >
-          {(data as IProduct[]).map((item: IProduct) => (
+          {paginatedProducts.map((item) => (
             <Box
               key={item.id}
               sx={{
                 p: 2,
-                width: {
-                  xs: "50%",
-                  sm: "33.3333%",
-                  lg: "25%",
-                },
+                width: { xs: "50%", sm: "33.3333%", lg: "25%" },
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -111,7 +72,8 @@ export default async function CategoryPage({
             </Box>
           ))}
         </Box>
-        {pageNumbers.length > 1 && (
+
+        {totalPages > 1 && (
           <Box
             sx={{
               display: "flex",
@@ -121,9 +83,9 @@ export default async function CategoryPage({
             }}
           >
             <PaginationWithLinks
-              count={pageNumbers.length}
-              categorySlug={(await params).categorySlug.toString()}
-              filters={filters}
+              count={totalPages}
+              categorySlug={categoryId}
+              filters=""
             />
           </Box>
         )}
