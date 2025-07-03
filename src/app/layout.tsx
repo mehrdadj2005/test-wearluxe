@@ -1,5 +1,3 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
 import theme from "@/components/them";
 import { Box, ThemeProvider } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
@@ -28,9 +26,9 @@ export default function RootLayout({
                   minHeight: "100dvh",
                 }}
               >
-                <Header />
+                {/* <Header /> */}
                 {children}
-                <Footer />
+                {/* <Footer /> */}
               </Box>
             </ThemeProvider>
           </AppRouterCacheProvider>
