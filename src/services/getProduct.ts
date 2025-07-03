@@ -31,18 +31,39 @@
 // };
 
 // lib/products.ts
+// import { promises as fs } from "fs";
+// import path from "path";
+
+// export async function getProducts(categoryId?: string) {
+//   const filePath = path.join(process.cwd(), "src", "data", "db.json");
+//   const file = await fs.readFile(filePath, "utf-8");
+//   const json = JSON.parse(file);
+
+//   let products = json.products;
+//   if (categoryId) {
+//     products = products.filter(
+//       (p: { categoryId: string }) => String(p.categoryId) === String(categoryId)
+//     );
+//   }
+
+//   return products;
+// }
+
+// services/getProduct.ts
+import { IProduct } from "@/types/product";
 import { promises as fs } from "fs";
 import path from "path";
 
-export async function getProducts(categoryId?: string) {
+export async function getProducts(categoryId?: string): Promise<IProduct[]> {
   const filePath = path.join(process.cwd(), "src", "data", "db.json");
   const file = await fs.readFile(filePath, "utf-8");
   const json = JSON.parse(file);
 
-  let products = json.products;
+  let products = json.products as IProduct[];
+
   if (categoryId) {
     products = products.filter(
-      (p: { categoryId: string }) => String(p.categoryId) === String(categoryId)
+      (p) => String(p.categoryId) === String(categoryId)
     );
   }
 
