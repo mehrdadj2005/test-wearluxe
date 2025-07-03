@@ -10,10 +10,6 @@ import ProductError from "./error";
 import ProductActionGroup from "./ProductActionGroup";
 import ProductDetails from "./ProductDetails";
 
-interface IParams {
-  params: { productSlug: string };
-}
-
 export async function generateStaticParams() {
   const products = await getProducts();
   return products.map((product) => ({
@@ -21,7 +17,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProductPage({ params }: IParams) {
+export default async function ProductPage({
+  params,
+}: {
+  params: { productSlug: string };
+}) {
   const products = await getProducts();
   const data = products.find((p) => String(p.id) === params.productSlug);
 
