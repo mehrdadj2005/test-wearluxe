@@ -1,3 +1,5 @@
+// 📁 src/app/(shop)/products/[productSlug]/page.tsx
+
 import Container from "@/components/container";
 import { formatPrice } from "@/helper/helper";
 import { getProducts } from "@/services/getProduct";
@@ -8,18 +10,22 @@ import ProductError from "./error";
 import ProductActionGroup from "./ProductActionGroup";
 import ProductDetails from "./ProductDetails";
 
-interface ICategory {
+interface IParams {
   params: { productSlug: string };
 }
 
-async function ProductId({ params }: ICategory) {
-  const allProducts = await getProducts();
-  const data = allProducts.find(
-    (p) => String(p.id) === String(params.productSlug)
-  );
+export async function generateStaticParams() {
+  const products = await getProducts();
+  return products.map((product) => ({
+    productSlug: String(product.id),
+  }));
+}
 
-  if (!data || Object.keys(data).length === 0)
-    return <ProductError error="محصولی یافت نشد" />;
+export default async function ProductPage({ params }: IParams) {
+  const products = await getProducts();
+  const data = products.find((p) => String(p.id) === params.productSlug);
+
+  if (!data) return <ProductError error="محصولی یافت نشد" />;
 
   return (
     <Container>
@@ -209,12 +215,10 @@ async function ProductId({ params }: ICategory) {
           <ProductActionGroup product={data} />
         </Grid>
 
-        <Grid size={12}>
+        <Grid size={{ xs: 12 }}>
           <ProductDetails product={data} />
         </Grid>
       </Grid>
     </Container>
   );
 }
-
-export default ProductId;
