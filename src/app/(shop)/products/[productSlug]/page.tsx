@@ -1,34 +1,34 @@
 import Container from "@/components/container";
-import { getProduct } from "@/services/getProduct";
+import { formatPrice } from "@/helper/helper";
+import { getProducts } from "@/services/getProduct";
+import { ArrowLeft } from "@mui/icons-material";
 import { Box, Divider, Grid, List, ListItem, Typography } from "@mui/material";
 import Image from "next/image";
 import ProductError from "./error";
-import { ArrowLeft } from "@mui/icons-material";
-import ProductDetails from "./ProductDetails";
 import ProductActionGroup from "./ProductActionGroup";
-import { IProduct } from "@/types/product";
-import { formatPrice } from "@/helper/helper";
+import ProductDetails from "./ProductDetails";
 
 interface ICategory {
-  params: Promise<{ productSlug: string }>;
+  params: { productSlug: string };
 }
 
-
 async function ProductId({ params }: ICategory) {
-  const { data, error } = await getProduct<IProduct>(
-    `http://localhost:4000/products/${(await params).productSlug}`
+  const allProducts = await getProducts();
+  const data = allProducts.find(
+    (p) => String(p.id) === String(params.productSlug)
   );
 
-  if (error || Object.keys(data).length === 0 || !data) return <ProductError error={error} />;
+  if (!data || Object.keys(data).length === 0)
+    return <ProductError error="محصولی یافت نشد" />;
 
   return (
     <Container>
       <Grid container spacing={3} sx={{ paddingY: { xs: 10, md: 10 } }}>
         <Grid size={{ xs: 12, md: 5 }}>
           <Image
-            src={Array.isArray(data.images) && data.images[0]
-              ? data.images[0]
-              : ""}
+            src={
+              Array.isArray(data.images) && data.images[0] ? data.images[0] : ""
+            }
             alt={data.name || ""}
             width={500}
             height={500}
@@ -137,8 +137,11 @@ async function ProductId({ params }: ICategory) {
                 >
                   :
                 </Typography>
-                <Typography>{typeof data.sizes === "object" && data.sizes !== null
-                  ? Object.keys(data.sizes).join(", ") : ""}</Typography>
+                <Typography>
+                  {typeof data.sizes === "object" && data.sizes !== null
+                    ? Object.keys(data.sizes).join(", ")
+                    : ""}
+                </Typography>
               </ListItem>
 
               <ListItem
@@ -158,7 +161,9 @@ async function ProductId({ params }: ICategory) {
                 >
                   :
                 </Typography>
-                <Typography>{Array.isArray(data.colors) ? data.colors.join(", ") : ""}</Typography>
+                <Typography>
+                  {Array.isArray(data.colors) ? data.colors.join(", ") : ""}
+                </Typography>
               </ListItem>
 
               <ListItem
