@@ -1,4 +1,4 @@
-import { getProduct } from "@/services/getProduct";
+import { getProducts } from "@/services/getProduct";
 import { ICategory } from "@/types/category";
 import { Email, Instagram, Telegram } from "@mui/icons-material";
 import {
@@ -13,7 +13,7 @@ import Link from "next/link";
 import Container from "./container";
 
 async function Footer() {
-  const { data } = await getProduct<ICategory[]>(
+  const { data } = await getProducts<ICategory[]>(
     "http://localhost:4000/categories"
   );
 
