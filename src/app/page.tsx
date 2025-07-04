@@ -10,19 +10,19 @@ export default async function HomePage() {
     "http://localhost:4000/products?categoryId=1"
   );
   const { data: dataPants } = await getProduct<IProduct[]>(
-    "https://wearluxe-api.onrender.com/products?categoryId=2"
+    "http://localhost:4000/products?categoryId=2"
   );
   const { data: dataCaps } = await getProduct<IProduct[]>(
-    "https://wearluxe-api.onrender.com/products?categoryId=3"
+    "http://localhost:4000/products?categoryId=3"
   );
   const { data: dataSets } = await getProduct<IProduct[]>(
-    "https://wearluxe-api.onrender.com/products?categoryId=4"
+    "http://localhost:4000/products?categoryId=4"
   );
   const { data: dataOptions } = await getProduct<IOption[]>(
-    "https://wearluxe-api.onrender.com/options"
+    "http://localhost:4000/options"
   );
   const { data: landingBaner } = await getProduct<IBanner[]>(
-    "https://wearluxe-api.onrender.com/banners"
+    "http://localhost:4000/banners"
   );
 
   return (
