@@ -22,6 +22,9 @@ export default async function HomePage() {
   const { data: dataOptions = [] } = await getProduct<IOption[]>("/options");
   const { data: landingBaner = [] } = await getProduct<IBanner[]>("/banners");
 
+  console.log("Shirts Data:", dataShirts);
+  console.log("Pants Data:", dataPants);
+
   return (
     <>
       <HeroSection />
