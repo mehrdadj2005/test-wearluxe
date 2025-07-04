@@ -8,15 +8,16 @@ import ProductError from "./error";
 import ProductActionGroup from "./ProductActionGroup";
 import ProductDetails from "./ProductDetails";
 
-type Props = {
-  params: {
-    productSlug: string;
-  };
-};
-
-export default async function ProductPage({ params }: Props) {
+export default async function ProductPage({
+  params,
+}: {
+  params: { productSlug: string };
+}) {
   const allProducts = await getProducts();
-  const data = allProducts.find((p) => String(p.id) === params.productSlug);
+
+  const data = allProducts.find(
+    (p) => String(p.id) === String(params.productSlug)
+  );
 
   if (!data) return <ProductError error="محصولی یافت نشد" />;
 
