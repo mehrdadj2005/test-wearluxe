@@ -8,23 +8,19 @@ import { Box, CardMedia, Container, Typography } from "@mui/material";
 
 export default async function HomePage() {
   const { data: dataShirts = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products?categoryId=1"
+    "/products?categoryId=1"
   );
   const { data: dataPants = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products?categoryId=2"
+    "/products?categoryId=2"
   );
   const { data: dataCaps = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products?categoryId=3"
+    "/products?categoryId=3"
   );
   const { data: dataSets = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products?categoryId=4"
+    "/products?categoryId=4"
   );
-  const { data: dataOptions = [] } = await getProduct<IOption[]>(
-    "http://localhost:4000/options"
-  );
-  const { data: landingBaner = [] } = await getProduct<IBanner[]>(
-    "http://localhost:4000/banners"
-  );
+  const { data: dataOptions = [] } = await getProduct<IOption[]>("/options");
+  const { data: landingBaner = [] } = await getProduct<IBanner[]>("/banners");
 
   return (
     <>
