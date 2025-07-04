@@ -13,6 +13,7 @@ export default async function ProductPage({
 }: {
   params: { productSlug: string };
 }) {
+  console.log(params);
   const allProducts = await getProducts();
 
   const data = allProducts.find(
