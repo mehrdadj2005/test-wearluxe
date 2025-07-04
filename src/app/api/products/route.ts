@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const url = new URL(request.url);
     const categoryId = url.searchParams.get("categoryId");
 
-    const filePath = path.join(process.cwd(), "data", "db.json");
+    const filePath = path.join(process.cwd(), "src", "data", "db.json");
     const file = await filePath;
     const json = JSON.parse(file);
 
