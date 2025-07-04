@@ -8,7 +8,7 @@ import ProductError from "./error";
 import ProductActionGroup from "./ProductActionGroup";
 import ProductDetails from "./ProductDetails";
 
-export default async function ProductPage(params: { productSlug: any }) {
+export async function ProductPage(params: { productSlug: any }) {
   const allProducts = await getProducts();
 
   const data = allProducts.find(
