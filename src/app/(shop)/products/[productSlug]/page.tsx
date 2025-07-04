@@ -8,11 +8,13 @@ import ProductError from "./error";
 import ProductActionGroup from "./ProductActionGroup";
 import ProductDetails from "./ProductDetails";
 
-export default async function ProductPage({
-  params,
-}: {
-  params: { productSlug: string };
-}) {
+interface ProductPageProps {
+  params: {
+    productSlug: string;
+  };
+}
+
+export default async function ProductPage({ params }: ProductPageProps) {
   const allProducts = await getProducts();
 
   const data = allProducts.find(
@@ -48,7 +50,6 @@ export default async function ProductPage({
         >
           <Box>
             <Typography variant="h5">{data.name}</Typography>
-            {/* قیمت و تخفیف */}
             <Box sx={{ display: "flex", alignItems: "center", gap: 2, mt: 2 }}>
               {data.discountedPercentage > 0 && (
                 <Typography color="primary" variant="h6">
@@ -87,7 +88,6 @@ export default async function ProductPage({
               </Box>
             </Box>
 
-            {/* ویژگی‌های محصول */}
             <List sx={{ py: 2 }}>
               <ListItem>
                 <Typography variant="body2">سایز:</Typography>
