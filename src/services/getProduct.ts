@@ -1,31 +1,42 @@
 /**
- * Fetches product data from the provided URL.
+ * Fetches product data from the provided URL (relative path).
  *
- * This function makes an asynchronous HTTP request to retrieve product information.
- * It includes caching options using the revalidate configuration to optimize repeated requests.
- * If the fetch operation fails or the product data is not found, the function returns an error message.
+ * Uses base API URL from environment variables and handles errors gracefully.
+ * Compatible with both local and deployed (Vercel) environments.
  *
- * @param url - The URL endpoint from which to fetch the product data.
+ * @param endpoint - API endpoint path like `/products?categoryId=1`
  * @returns A Promise resolving to an object containing:
- *          - data: The product information of type IProduct. In case of an error, this will be an empty object.
- *          - error: An error message string if an error occurs; otherwise, an empty string.
+ *          - data: The product data of generic type T
+ *          - error: Error message string if any error occurs
  */
 export const getProduct = async <T>(
-  url: string
+  endpoint: string
 ): Promise<{ data: T; error: string }> => {
   try {
-    // Enable caching with revalidation
-    const res = await fetch(url, { next: { revalidate: 0 } });
-    if (!res.ok)
-      throw new Error("خطا در برقراری ارتباط, لطفا دوباره امتحان کنید.");
+    const BASE_URL = process.env.API_URL || "http://localhost:4000";
+    const res = await fetch(`${BASE_URL}${endpoint}`, {
+      next: { revalidate: 0 },
+    });
+
+    if (!res.ok) {
+      throw new Error("خطا در برقراری ارتباط، لطفاً دوباره تلاش کنید.");
+    }
+
     const data: T = await res.json();
-    if (!data || typeof data !== "object") throw new Error("محصولی یافت نشد.");
+
+    if (!data || typeof data !== "object") {
+      throw new Error("داده‌ای یافت نشد.");
+    }
+
     return { data, error: "" };
   } catch (error: unknown) {
     let message = "خطایی رخ داده است";
     if (error instanceof Error) {
       message = error.message;
     }
-    return { data: {} as T, error: message };
+
+    // Return an empty array or object depending on T
+    const fallbackData = Array.isArray([] as T) ? ([] as T) : ({} as T);
+    return { data: fallbackData, error: message };
   }
 };
