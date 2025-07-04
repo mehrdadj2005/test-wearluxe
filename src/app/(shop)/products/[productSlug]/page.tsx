@@ -8,13 +8,11 @@ import ProductError from "./error";
 import ProductActionGroup from "./ProductActionGroup";
 import ProductDetails from "./ProductDetails";
 
-interface ProductPageProps {
-  params: {
-    productSlug: string;
-  };
-}
-
-export default async function ProductPage({ params }: ProductPageProps) {
+export default async function ProductPage({
+  params,
+}: {
+  params: { productSlug: string };
+}) {
   const allProducts = await getProducts();
 
   const data = allProducts.find(
