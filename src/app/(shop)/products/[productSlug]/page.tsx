@@ -11,7 +11,7 @@ import ProductDetails from "./ProductDetails";
 export default async function ProductPage({
   params,
 }: {
-  params: { productSlug: string };
+  params: { productSlug: any };
 }) {
   const allProducts = await getProducts();
 
