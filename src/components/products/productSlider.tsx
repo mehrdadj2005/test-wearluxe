@@ -21,11 +21,6 @@ export default function ProductSlider({
   className,
   sx,
 }: ProductSliderProps) {
-  if (!Array.isArray(data) || data.length === 0) return null;
-
-  const categoryName = data[0]?.categoryName;
-  const categoryId = data[0]?.categoryId;
-
   return (
     <Container>
       <Box
@@ -46,44 +41,52 @@ export default function ProductSlider({
             paddingBottom: "8px",
           }}
         >
-          {categoryName}
+          {data[0].categoryName}
         </Typography>
 
-        {categoryId && (
-          <Link href={`/products/category/${categoryId}`}>
-            <Button
-              variant="outlined"
-              sx={{
-                border: "1px solid var(--color-neutral-300)",
-                color: "var(--color-neutral-800)",
-                padding: "6px 28px",
-                ":hover": {
-                  border: "1px solid var(--color-neutral-600)",
-                  background: "var(--color-neutral-200)",
-                },
-                transition: "all 0.3s ease",
-              }}
-            >
-              مشاهده همه
-            </Button>
-          </Link>
-        )}
+        <Link href={`/products/category/${data[0].categoryId}`}>
+          <Button
+            variant="outlined"
+            // className="!border-neutral-800 !text-neutral-800"
+            sx={{
+              border: "1px solid var(--color-neutral-300)",
+              color: "var(--color-neutral-800)",
+              padding: "6px 28px",
+              ":hover": {
+                border: "1px solid var(--color-neutral-600)",
+                background: "var(--color-neutral-200)",
+              },
+              transition: "all 0.3s ease",
+            }}
+          >
+            مشاهده همه
+          </Button>
+        </Link>
       </Box>
-
       <Swiper
         spaceBetween={10}
         freeMode={true}
         modules={[Pagination]}
         className={`!px-2 !py-4 !pt-0 ${className}`}
         breakpoints={{
-          360: { slidesPerView: 2 },
-          460: { slidesPerView: 2 },
-          640: { slidesPerView: 3 },
-          800: { slidesPerView: 4 },
-          1024: { slidesPerView: 5 },
+          360: {
+            slidesPerView: 2,
+          },
+          460: {
+            slidesPerView: 2,
+          },
+          640: {
+            slidesPerView: 3,
+          },
+          800: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
         }}
       >
-        {data.map((item: IProduct) => (
+        {Array.isArray(data) && data.map((item: IProduct) => (
           <SwiperSlide key={item.id}>
             <Link href={`products/${item.id}`}>
               <ProductCard item={item} />
