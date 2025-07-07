@@ -11,18 +11,20 @@ export default async function HomePage() {
     "http://localhost:4000/products"
   );
   const { data: dataPants = [] } = await getProduct<IProduct[]>(
-    "/products?categoryId=2"
+    "http://localhost:4000/products"
   );
   const { data: dataCaps = [] } = await getProduct<IProduct[]>(
-    "/products?categoryId=3"
+    "http://localhost:4000/products"
   );
   const { data: dataSets = [] } = await getProduct<IProduct[]>(
-    "/products?categoryId=4"
+    "http://localhost:4000/products"
   );
   const { data: dataOptions = [] } = await getProduct<IOption[]>(
-    "/api/options"
+    "http://localhost:4000//options"
   );
-  const { data: landingBaner = [] } = await getProduct<IBanner[]>("/banners");
+  const { data: landingBaner = [] } = await getProduct<IBanner[]>(
+    "http://localhost:4000/banners"
+  );
 
   console.log("Shirts Data:", dataShirts);
   console.log("Pants Data:", dataPants);
