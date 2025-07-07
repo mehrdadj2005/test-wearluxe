@@ -2,6 +2,7 @@ import HeroSection from "@/components/layout/hero";
 import ProductSlider from "@/components/products/productSlider";
 import { getProduct } from "@/services/getProduct";
 import { IBanner } from "@/types/banners";
+import { ICategory } from "@/types/category";
 import { IOption } from "@/types/options";
 import { IProduct } from "@/types/product";
 import { Box, CardMedia, Container, Typography } from "@mui/material";
@@ -25,13 +26,24 @@ export default async function HomePage() {
   const { data: landingBaner = [] } = await getProduct<IBanner[]>(
     "http://localhost:4000/banners"
   );
+  const { data: categories } = await getProduct<ICategory[]>(
+    "http://localhost:4000/categories"
+  );
 
   console.log("Shirts Data:", dataShirts);
   console.log("Pants Data:", dataPants);
+  console.log("Pants categories:", categories);
 
   return (
     <>
       <HeroSection />
+
+      {categories.map((item) => (
+        <div key={item.id}>
+          <h3>{item.slug}</h3>
+          <h3>{item.title}</h3>
+        </div>
+      ))}
 
       {/* آپشن‌ها */}
       {dataOptions.length > 0 && (
