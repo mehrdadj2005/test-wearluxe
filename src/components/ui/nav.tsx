@@ -1,3 +1,4 @@
+"use client";
 import { getProduct } from "@/services/getProduct";
 import { ICategory } from "@/types/category";
 import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
