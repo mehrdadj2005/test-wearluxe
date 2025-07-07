@@ -84,6 +84,7 @@ export const getProduct = async <T>(
     const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
     const response = await fetch(`${BASE_URL}${endpoint}`, {
       next: { revalidate: 0 }, // disable ISR (optional)
+      cache: "no-store",
     });
 
     if (!response.ok) {
