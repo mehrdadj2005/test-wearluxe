@@ -1,3 +1,4 @@
+"use client";
 import { getProduct } from "@/services/getProduct";
 import { IBanner } from "@/types/banners";
 import { IOption } from "@/types/options";
@@ -5,22 +6,51 @@ import { IProduct } from "@/types/product";
 
 import ProductSlider from "@/components/products/productSlider";
 import { Box, CardMedia, Container, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
-export default async function Asd() {
-  const { data: dataShirts = [] } = await getProduct<IProduct[]>(
-    "/products?categoryId=1"
-  );
-  const { data: dataPants = [] } = await getProduct<IProduct[]>(
-    "/products?categoryId=2"
-  );
-  const { data: dataCaps = [] } = await getProduct<IProduct[]>(
-    "/products?categoryId=3"
-  );
-  const { data: dataSets = [] } = await getProduct<IProduct[]>(
-    "/products?categoryId=4"
-  );
-  const { data: dataOptions = [] } = await getProduct<IOption[]>("/options");
-  const { data: landingBaner = [] } = await getProduct<IBanner[]>("/banners");
+export default function Asd() {
+  const [dataShirts, setDataShirts] = useState<IProduct[]>([]);
+  const [dataPants, setDataPants] = useState<IProduct[]>([]);
+  const [dataCaps, setDataCaps] = useState<IProduct[]>([]);
+  const [dataSets, setDataSets] = useState<IProduct[]>([]);
+
+  const [dataOptions, setDataOptions] = useState<IOption[]>([]);
+  const [landingBaner, setLandingBaner] = useState<IBanner[]>([]);
+
+  useEffect(() => {
+    const fetchdata = async () => {
+      const { data: dataShirts = [] } = await getProduct<IProduct[]>(
+        "/products?categoryId=1"
+      );
+      setDataShirts(dataShirts);
+
+      const { data: dataPants = [] } = await getProduct<IProduct[]>(
+        "/products?categoryId=2"
+      );
+      setDataPants(dataPants);
+
+      const { data: dataCaps = [] } = await getProduct<IProduct[]>(
+        "/products?categoryId=3"
+      );
+      setDataCaps(dataCaps);
+
+      const { data: dataSets = [] } = await getProduct<IProduct[]>(
+        "/products?categoryId=4"
+      );
+      setDataSets(dataSets);
+
+      const { data: dataOptions = [] } = await getProduct<IOption[]>(
+        "/options"
+      );
+      setDataOptions(dataOptions);
+
+      const { data: landingBaner = [] } = await getProduct<IBanner[]>(
+        "/banners"
+      );
+      setLandingBaner(landingBaner);
+    };
+    fetchdata();
+  }, []);
 
   return (
     <>
