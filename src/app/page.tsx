@@ -38,12 +38,13 @@ export default async function HomePage() {
     <>
       <HeroSection />
 
-      {categories.map((item) => (
-        <div key={item.id}>
-          <h3>{item.slug}</h3>
-          <h3>{item.title}</h3>
-        </div>
-      ))}
+      {Array.isArray(categories) &&
+        categories.map((item) => (
+          <div key={item.id}>
+            <h3>{item.slug}</h3>
+            <h3>{item.title}</h3>
+          </div>
+        ))}
 
       {/* آپشن‌ها */}
       {dataOptions.length > 0 && (
