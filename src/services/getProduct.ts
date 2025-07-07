@@ -41,22 +41,75 @@
 //   }
 // };
 
+// -----------------------------------------------------
+
+// export const getProduct = async <T>(
+//   url: string
+// ): Promise<{ data: T; error: string }> => {
+//   try {
+//     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ""}${url}`, {
+//       next: { revalidate: 0 }, // اگر ISR نمی‌خوای، این بمونه
+//     });
+
+//     if (!res.ok) throw new Error("خطا در ارتباط با سرور");
+
+//     const data: T = await res.json();
+//     return { data, error: "" };
+//   } catch (error) {
+//     return {
+//       data: {} as T,
+//       error: error instanceof Error ? error.message : "خطایی رخ داده",
+//     };
+//   }
+// };
+
+// -----------------------------------------------------
+
+/**
+ * Fetches data from the given API endpoint.
+ *
+ * Automatically selects base URL from environment variables based on the environment.
+ * Gracefully handles errors and invalid responses.
+ *
+ * @template T - Expected shape of the API response
+ * @param endpoint - Relative API endpoint (e.g. `/products?id=1`)
+ * @returns A Promise resolving to an object:
+ *          - data: Parsed API response of type T
+ *          - error: String describing error (empty if success)
+ */
 export const getProduct = async <T>(
-  url: string
+  endpoint: string
 ): Promise<{ data: T; error: string }> => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ""}${url}`, {
-      next: { revalidate: 0 }, // اگر ISR نمی‌خوای، این بمونه
+    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+    const response = await fetch(`${BASE_URL}${endpoint}`, {
+      next: { revalidate: 0 }, // disable ISR (optional)
     });
 
-    if (!res.ok) throw new Error("خطا در ارتباط با سرور");
+    if (!response.ok) {
+      throw new Error("ارتباط با سرور با خطا مواجه شد.");
+    }
 
-    const data: T = await res.json();
-    return { data, error: "" };
-  } catch (error) {
+    const jsonData: unknown = await response.json();
+
+    if (
+      !jsonData ||
+      (typeof jsonData !== "object" && !Array.isArray(jsonData))
+    ) {
+      throw new Error("پاسخ نامعتبر از سرور دریافت شد.");
+    }
+
+    return { data: jsonData as T, error: "" };
+  } catch (error: unknown) {
+    const errorMessage =
+      error instanceof Error ? error.message : "خطایی ناشناخته رخ داده است.";
+
+    // fallback: return empty array or object depending on generic T
+    const fallback: T = Array.isArray([] as T) ? ([] as T) : ({} as T);
+
     return {
-      data: {} as T,
-      error: error instanceof Error ? error.message : "خطایی رخ داده",
+      data: fallback,
+      error: errorMessage,
     };
   }
 };

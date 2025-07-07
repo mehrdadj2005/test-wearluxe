@@ -10,30 +10,20 @@ import { Box, CardMedia, Container, Typography } from "@mui/material";
 
 export default async function HomePage() {
   const { data: dataShirts = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products"
+    "/products?categoryId=1"
   );
   const { data: dataPants = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products"
+    "/products?categoryId=2"
   );
   const { data: dataCaps = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products"
+    "/products?categoryId=3"
   );
   const { data: dataSets = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products"
+    "/products?categoryId=4"
   );
-  const { data: dataOptions = [] } = await getProduct<IOption[]>(
-    "http://localhost:4000//options"
-  );
-  const { data: landingBaner = [] } = await getProduct<IBanner[]>(
-    "http://localhost:4000/banners"
-  );
-  const { data: categories } = await getProduct<ICategory[]>(
-    "http://localhost:4000/categories"
-  );
-
-  console.log("Shirts Data:", dataShirts);
-  console.log("Pants Data:", dataPants);
-  console.log("Pants categories:", categories);
+  const { data: dataOptions = [] } = await getProduct<IOption[]>("/options");
+  const { data: landingBaner = [] } = await getProduct<IBanner[]>("/banners");
+  const { data: categories } = await getProduct<ICategory[]>("/categories");
 
   return (
     <>
