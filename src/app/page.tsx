@@ -8,7 +8,7 @@ import { Box, CardMedia, Container, Typography } from "@mui/material";
 
 export default async function HomePage() {
   const { data: dataShirts = [] } = await getProduct<IProduct[]>(
-    "http://localhost:4000/products?categoryId=1"
+    "http://localhost:4000/products"
   );
   const { data: dataPants = [] } = await getProduct<IProduct[]>(
     "/products?categoryId=2"
