@@ -33,9 +33,7 @@ function Nav({ className, type }: INav) {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      const { data } = await getProduct<ICategory[]>(
-        "http://localhost:4000/categories"
-      );
+      const { data } = await getProduct<ICategory[]>("/categories");
       setCategory(data);
     };
     fetchCategories();
