@@ -20,13 +20,11 @@ export default function Asd() {
   useEffect(() => {
     const fetchdata = async () => {
       const { data: dataShirts = [] } = await getProduct<IProduct[]>(
-        "/products?categoryId=1"
+        "/products"
       );
       setDataShirts(dataShirts);
 
-      const { data: dataPants = [] } = await getProduct<IProduct[]>(
-        "/products?categoryId=2"
-      );
+      const { data: dataPants = [] } = await getProduct<IProduct[]>("/");
       setDataPants(dataPants);
 
       const { data: dataCaps = [] } = await getProduct<IProduct[]>(
