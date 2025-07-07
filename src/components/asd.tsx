@@ -1,3 +1,4 @@
+"use client";
 import { getProduct } from "@/services/getProduct";
 import { ICategory } from "@/types/category";
 import { useEffect, useState } from "react";
