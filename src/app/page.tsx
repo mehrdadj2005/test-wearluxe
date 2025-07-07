@@ -1,3 +1,4 @@
+import Asd from "@/components/asd";
 import HeroSection from "@/components/layout/hero";
 import ProductSlider from "@/components/products/productSlider";
 import { getProduct } from "@/services/getProduct";
@@ -37,7 +38,7 @@ export default async function HomePage() {
   return (
     <>
       <HeroSection />
-
+      <Asd />
       {Array.isArray(categories) &&
         categories.map((item) => (
           <div key={item.id}>
