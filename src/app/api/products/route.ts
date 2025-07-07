@@ -44,7 +44,8 @@ export async function GET(request: Request) {
 
     if (categoryId) {
       filteredProducts = json.products.filter(
-        (product: any) => String(product.categoryId) === categoryId
+        (product: { categoryId: string | number }) =>
+          String(product.categoryId) === categoryId
       );
     }
 
