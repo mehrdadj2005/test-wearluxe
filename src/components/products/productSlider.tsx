@@ -44,7 +44,7 @@ export default function ProductSlider({
           {data[0].categoryName}
         </Typography>
 
-        <Link href={`/products/categoryId/${data[0].categoryId}`}>
+        <Link href={`/products/category/${data[0].categoryId}`}>
           <Button
             variant="outlined"
             // className="!border-neutral-800 !text-neutral-800"
