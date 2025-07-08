@@ -44,7 +44,7 @@ export async function GET(request: Request) {
     const categoryId = searchParams.get("categoryId");
     const color = searchParams.get("color");
     // const size = searchParams.get("size");
-    const sort = searchParams.get("sort");
+    // const sort = searchParams.get("sort");
 
     const filePath = path.join(process.cwd(), "src", "data", "db.json");
     const file = await fs.readFile(filePath, "utf-8");
@@ -71,13 +71,13 @@ export async function GET(request: Request) {
     //   );
     // }
 
-    if (sort === "price-asc") {
-      filteredProducts.sort((a: any, b: any) => a.price - b.price);
-    } else if (sort === "price-desc") {
-      filteredProducts.sort((a: any, b: any) => b.price - a.price);
-    } else if (sort === "newest") {
-      filteredProducts.sort((a: any, b: any) => b.id - a.id);
-    }
+    // if (sort === "price-asc") {
+    //   filteredProducts.sort((a: any, b: any) => a.price - b.price);
+    // } else if (sort === "price-desc") {
+    //   filteredProducts.sort((a: any, b: any) => b.price - a.price);
+    // } else if (sort === "newest") {
+    //   filteredProducts.sort((a: any, b: any) => b.id - a.id);
+    // }
 
     return NextResponse.json(filteredProducts);
   } catch (err) {
