@@ -32,6 +32,7 @@
 //   }
 // }
 
+import { IProduct } from "@/types/product";
 import { promises as fs } from "fs";
 import { NextResponse } from "next/server";
 import path from "path";
@@ -53,7 +54,9 @@ export async function GET(request: Request) {
 
     // فیلتر دسته‌بندی
     if (categoryId) {
-      filtered = filtered.filter((item: any) => item.categoryId === categoryId);
+      filtered = filtered.filter(
+        (item: IProduct) => item.categoryId === categoryId
+      );
     }
 
     // فیلتر رنگ انگلیسی
