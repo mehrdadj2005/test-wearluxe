@@ -42,7 +42,7 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
 
     const categoryId = searchParams.get("categoryId");
-    const color = searchParams.get("color");
+    // const color = searchParams.get("color");
     // const size = searchParams.get("size");
     // const sort = searchParams.get("sort");
 
@@ -59,11 +59,11 @@ export async function GET(request: Request) {
       );
     }
 
-    if (color) {
-      filteredProducts = filteredProducts.filter((product: any) =>
-        product.colors?.includes(color)
-      );
-    }
+    // if (color) {
+    //   filteredProducts = filteredProducts.filter((product: any) =>
+    //     product.colors?.includes(color)
+    //   );
+    // }
 
     // if (size) {
     //   filteredProducts = filteredProducts.filter((product: any) =>
