@@ -30,7 +30,7 @@
 //   type: string;
 // }
 
-type Product = {
+export interface IProduct {
   id: string;
   categoryId: string;
   categoryName: string;
@@ -55,4 +55,4 @@ type Product = {
   slug: string;
   stock: boolean;
   type: string;
-};
+}
