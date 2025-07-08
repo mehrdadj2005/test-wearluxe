@@ -44,7 +44,7 @@ export default function ProductSlider({
           {data[0].categoryName}
         </Typography>
 
-        <Link href={`/products/category/${data[0].categoryId}`}>
+        <Link href={`/products/categoryId/${data[0].categoryId}`}>
           <Button
             variant="outlined"
             // className="!border-neutral-800 !text-neutral-800"
@@ -86,13 +86,14 @@ export default function ProductSlider({
           },
         }}
       >
-        {Array.isArray(data) && data.map((item: IProduct) => (
-          <SwiperSlide key={item.id}>
-            <Link href={`products/${item.id}`}>
-              <ProductCard item={item} />
-            </Link>
-          </SwiperSlide>
-        ))}
+        {Array.isArray(data) &&
+          data.map((item: IProduct) => (
+            <SwiperSlide key={item.id}>
+              <Link href={`products/${item.id}`}>
+                <ProductCard item={item} />
+              </Link>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </Container>
   );
