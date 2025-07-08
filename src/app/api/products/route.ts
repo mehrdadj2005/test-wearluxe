@@ -43,7 +43,7 @@ export async function GET(request: Request) {
 
     const categoryId = searchParams.get("categoryId");
     const color = searchParams.get("color");
-    const size = searchParams.get("size");
+    // const size = searchParams.get("size");
     const sort = searchParams.get("sort");
 
     const filePath = path.join(process.cwd(), "src", "data", "db.json");
@@ -65,11 +65,11 @@ export async function GET(request: Request) {
       );
     }
 
-    if (size) {
-      filteredProducts = filteredProducts.filter((product: any) =>
-        product.sizes?.includes(size)
-      );
-    }
+    // if (size) {
+    //   filteredProducts = filteredProducts.filter((product: any) =>
+    //     product.sizes?.includes(size)
+    //   );
+    // }
 
     if (sort === "price-asc") {
       filteredProducts.sort((a: any, b: any) => a.price - b.price);
