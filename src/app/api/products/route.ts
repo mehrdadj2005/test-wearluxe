@@ -62,13 +62,13 @@ export async function GET(request: Request) {
     // فیلتر رنگ انگلیسی
     if (color) {
       filtered = filtered.filter(
-        (item: any) => item.color?.toLowerCase() === color.toLowerCase()
+        (item: IProduct) => item.color?.toLowerCase() === color.toLowerCase()
       );
     }
 
     // فیلتر سایز فقط اگر اون سایز موجود باشه (stock: true)
     if (size) {
-      filtered = filtered.filter((item: any) => {
+      filtered = filtered.filter((item: IProduct) => {
         const sizes = item.sizes || {};
         const targetSize = sizes[size];
         return targetSize?.stock === true;
