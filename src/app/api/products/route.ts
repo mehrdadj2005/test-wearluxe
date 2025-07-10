@@ -77,7 +77,21 @@ export async function GET(request: Request) {
 
     // مرتب‌سازی
     if (sortParam) {
+      let x = "";
       switch (sortParam) {
+        case "sales%26_order%3Ddesc":
+          x = "sales-desc";
+          break;
+        case "rating%26_order%3Ddesc":
+          x = "rating-desc";
+        case "publishTimeSort%26_order%3Ddesc":
+          x = "publishTimeSort-desc";
+        case "price%26_order%3Dasc":
+          x = "price-asc";
+        case "price%26_order%3Ddesc":
+          x = "price-desc";
+      }
+      switch (x) {
         case "sales-desc":
           filtered.sort((a: IProduct, b: IProduct) => b.sales - a.sales);
           break;
