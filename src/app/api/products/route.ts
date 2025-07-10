@@ -78,23 +78,23 @@ export async function GET(request: Request) {
     // مرتب‌سازی
     if (sortParam) {
       switch (sortParam) {
-        case "sales-desc":
+        case "sales%26_order%3Ddesc":
           filtered.sort((a: IProduct, b: IProduct) => b.sales - a.sales);
           break;
-        case "rating-desc":
+        case "rating%26_order%3Ddesc":
           filtered.sort((a: IProduct, b: IProduct) => b.rating - a.rating);
           break;
-        case "publishTimeSort-desc":
+        case "publishTimeSort%26_order%3Ddesc":
           filtered.sort(
             (a: IProduct, b: IProduct) =>
               new Date(b.publishTimeSort).getTime() -
               new Date(a.publishTimeSort).getTime()
           );
           break;
-        case "price-asc":
+        case "price%26_order%3Dasc":
           filtered.sort((a: IProduct, b: IProduct) => a.price - b.price);
           break;
-        case "price-desc":
+        case "price%26_order%3Ddesc":
           filtered.sort((a: IProduct, b: IProduct) => b.price - a.price);
           break;
       }
