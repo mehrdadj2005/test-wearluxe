@@ -45,6 +45,8 @@ export async function GET(request: Request) {
     const color = searchParams.get("color");
     const size = searchParams.get("size");
     const sortParam = searchParams.get("sort");
+    const minPrice = searchParams.get("price_gte");
+    const maxPrice = searchParams.get("price_lte");
 
     const filePath = path.join(process.cwd(), "src", "data", "db.json");
     const file = await fs.readFile(filePath, "utf-8");
@@ -59,14 +61,14 @@ export async function GET(request: Request) {
       );
     }
 
-    // فیلتر رنگ انگلیسی
+    // فیلتر رنگ
     if (color) {
       filtered = filtered.filter(
         (item: IProduct) => item.color?.toLowerCase() === color.toLowerCase()
       );
     }
 
-    // فیلتر سایز فقط اگر اون سایز موجود باشه (stock: true)
+    // فیلتر سایز
     if (size) {
       filtered = filtered.filter((item: IProduct) => {
         const sizes = item.sizes || {};
@@ -75,8 +77,18 @@ export async function GET(request: Request) {
       });
     }
 
+    // فیلتر قیمت
+    if (minPrice || maxPrice) {
+      filtered = filtered.filter((item: IProduct) => {
+        const price = Number(item.price);
+        const min = minPrice ? Number(minPrice) : 0;
+        const max = maxPrice ? Number(maxPrice) : Infinity;
+        return price >= min && price <= max;
+      });
+    }
+
     // مرتب‌سازی
-    if (sortParam && filtered && filtered.length > 0) {
+    if (sortParam && filtered.length > 0) {
       switch (sortParam) {
         case "sales-desc":
           filtered.sort(
