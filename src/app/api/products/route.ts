@@ -43,7 +43,7 @@ export async function GET(request: Request) {
 
     const categoryId = searchParams.get("categoryId");
     const color = searchParams.get("color");
-    // const size = searchParams.get("size");
+    const size = searchParams.get("size");
     // const sortParam = searchParams.get("sort");
 
     const filePath = path.join(process.cwd(), "src", "data", "db.json");
@@ -66,14 +66,14 @@ export async function GET(request: Request) {
       );
     }
 
-    // // فیلتر سایز فقط اگر اون سایز موجود باشه (stock: true)
-    // if (size) {
-    //   filtered = filtered.filter((item: IProduct) => {
-    //     const sizes = item.sizes || {};
-    //     const targetSize = sizes[size];
-    //     return targetSize?.stock === true;
-    //   });
-    // }
+    // فیلتر سایز فقط اگر اون سایز موجود باشه (stock: true)
+    if (size) {
+      filtered = filtered.filter((item: IProduct) => {
+        const sizes = item.sizes || {};
+        const targetSize = sizes[size];
+        return targetSize?.stock === true;
+      });
+    }
 
     // // مرتب‌سازی
     // if (sortParam) {
