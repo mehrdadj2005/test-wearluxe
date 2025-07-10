@@ -47,7 +47,7 @@ export default function ProductDetailsSort({
 
   const handleSortProduct = (id: string) => {
     const params = new URLSearchParams(searchParams.toString());
-    params.set("sort", id);
+    params.set("_sort", id);
 
     router.push(`/products/category/${urlBase}?${params.toString()}`);
   };
