@@ -44,7 +44,7 @@ export async function GET(request: Request) {
     const categoryId = searchParams.get("categoryId");
     const color = searchParams.get("color");
     const size = searchParams.get("size");
-    // const sortParam = searchParams.get("sort");
+    const sortParam = searchParams.get("sort");
 
     const filePath = path.join(process.cwd(), "src", "data", "db.json");
     const file = await fs.readFile(filePath, "utf-8");
@@ -75,30 +75,30 @@ export async function GET(request: Request) {
       });
     }
 
-    // // مرتب‌سازی
-    // if (sortParam) {
-    //   switch (sortParam) {
-    //     case "sales-desc":
-    //       filtered.sort((a: any, b: any) => b.sales - a.sales);
-    //       break;
-    //     case "rating-desc":
-    //       filtered.sort((a: any, b: any) => b.rating - a.rating);
-    //       break;
-    //     case "publishTimeSort-desc":
-    //       filtered.sort(
-    //         (a: any, b: any) =>
-    //           new Date(b.publishTimeSort).getTime() -
-    //           new Date(a.publishTimeSort).getTime()
-    //       );
-    //       break;
-    //     case "price-asc":
-    //       filtered.sort((a: any, b: any) => a.price - b.price);
-    //       break;
-    //     case "price-desc":
-    //       filtered.sort((a: any, b: any) => b.price - a.price);
-    //       break;
-    //   }
-    // }
+    // مرتب‌سازی
+    if (sortParam) {
+      switch (sortParam) {
+        case "sales-desc":
+          filtered.sort((a: any, b: any) => b.sales - a.sales);
+          break;
+        case "rating-desc":
+          filtered.sort((a: any, b: any) => b.rating - a.rating);
+          break;
+        case "publishTimeSort-desc":
+          filtered.sort(
+            (a: any, b: any) =>
+              new Date(b.publishTimeSort).getTime() -
+              new Date(a.publishTimeSort).getTime()
+          );
+          break;
+        case "price-asc":
+          filtered.sort((a: any, b: any) => a.price - b.price);
+          break;
+        case "price-desc":
+          filtered.sort((a: any, b: any) => b.price - a.price);
+          break;
+      }
+    }
 
     return NextResponse.json(filtered);
   } catch (error) {
