@@ -76,27 +76,17 @@ export async function GET(request: Request) {
     }
 
     // مرتب‌سازی
-    if (sortParam) {
-      let x = "";
+    if (sortParam && filtered && filtered.length > 0) {
       switch (sortParam) {
-        case "sales%26_order%3Ddesc":
-          x = "sales-desc";
-          break;
-        case "rating%26_order%3Ddesc":
-          x = "rating-desc";
-        case "publishTimeSort%26_order%3Ddesc":
-          x = "publishTimeSort-desc";
-        case "price%26_order%3Dasc":
-          x = "price-asc";
-        case "price%26_order%3Ddesc":
-          x = "price-desc";
-      }
-      switch (x) {
         case "sales-desc":
-          filtered.sort((a: IProduct, b: IProduct) => b.sales - a.sales);
+          filtered.sort(
+            (a: IProduct, b: IProduct) => Number(b.sales) - Number(a.sales)
+          );
           break;
         case "rating-desc":
-          filtered.sort((a: IProduct, b: IProduct) => b.rating - a.rating);
+          filtered.sort(
+            (a: IProduct, b: IProduct) => Number(b.rating) - Number(a.rating)
+          );
           break;
         case "publishTimeSort-desc":
           filtered.sort(
@@ -106,10 +96,14 @@ export async function GET(request: Request) {
           );
           break;
         case "price-asc":
-          filtered.sort((a: IProduct, b: IProduct) => a.price - b.price);
+          filtered.sort(
+            (a: IProduct, b: IProduct) => Number(a.price) - Number(b.price)
+          );
           break;
         case "price-desc":
-          filtered.sort((a: IProduct, b: IProduct) => b.price - a.price);
+          filtered.sort(
+            (a: IProduct, b: IProduct) => Number(b.price) - Number(a.price)
+          );
           break;
       }
     }
