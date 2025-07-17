@@ -1,3 +1,4 @@
+"use client";
 import HeroSection from "@/components/layout/hero";
 import { getProduct } from "@/services/getProduct";
 import { IBanner } from "@/types/banners";
