@@ -1,15 +1,20 @@
-import { products } from "@/data/db.json";
-import { NextResponse } from "next/server";
+// src/app/api/products/[id]/route.ts
+import { promises as fs } from "fs";
+import path from "path";
 
-export async function GET({ params }: { params: { id: string } }) {
-  // 'fs' is actually the products array imported from db.json
+export async function GET(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
+  const filePath = path.join(process.cwd(), "src/data/db.json");
+  const file = await fs.readFile(filePath, "utf-8");
+  const data = JSON.parse(file);
 
-  const { id } = params;
-  alert(id);
-  console.log(id);
-  const product = products.find((p) => p.id === id);
+  const product = data.products.find((item: any) => item.id === params.id);
 
   if (!product) {
-    return NextResponse.json({ message: "Product not found" }, { status: 404 });
+    return new Response("محصول پیدا نشد", { status: 404 });
   }
+
+  return Response.json(product);
 }
