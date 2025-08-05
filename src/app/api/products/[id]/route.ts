@@ -1,12 +1,12 @@
 import { products } from "@/data/db.json";
 import { NextResponse } from "next/server";
 
-export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
-  const { id } = params;
+export async function GET({ params }: { params: { id: string } }) {
+  // 'fs' is actually the products array imported from db.json
 
+  const { id } = params;
+  alert(id);
+  console.log(id);
   const product = products.find((p) => p.id === id);
 
   if (!product) {
