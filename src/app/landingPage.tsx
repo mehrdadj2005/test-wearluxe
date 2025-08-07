@@ -4,6 +4,7 @@ import { IBanner } from "@/types/banners";
 import { IOption } from "@/types/options";
 import { IProduct } from "@/types/product";
 
+import HeroSection from "@/components/layout/hero";
 import ProductSlider from "@/components/products/productSlider";
 import { Box, CardMedia, Container, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -54,6 +55,8 @@ export default function LandingPage() {
 
   return (
     <>
+      <HeroSection />
+
       {dataOptions.length > 0 && (
         <Container
           className="!px:w-full !px-3/4"
