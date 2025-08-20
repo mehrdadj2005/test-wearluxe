@@ -9,7 +9,7 @@ import LandingPage from "./landingPage";
 // import ProductSlider from "@/components/products/productSlider";
 // import { Box, CardMedia, Container, Typography } from "@mui/material";
 
-export default async function HomePage() {
+export default function HomePage() {
   return (
     <>
       <LandingPage />
