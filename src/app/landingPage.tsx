@@ -9,7 +9,7 @@ import ProductSlider from "@/components/products/productSlider";
 import { Box, CardMedia, Container, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
-export default async function LandingPage() {
+export default function LandingPage() {
   const [dataShirts, setDataShirts] = useState<IProduct[]>([]);
   const [dataPants, setDataPants] = useState<IProduct[]>([]);
   const [dataCaps, setDataCaps] = useState<IProduct[]>([]);
