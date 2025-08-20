@@ -132,40 +132,33 @@ export default async function LandingPage() {
   //   </>
   // );
 
-  let shirts = [];
-  let pants = [];
-  let caps = [];
-  let sets = [];
-  let options = [];
-  let landingBaner = [];
-
   const { data: dataShirts = [] } = await getProduct<IProduct[]>(
     "/products?categoryId=1"
   );
-  shirts = dataShirts;
+  dataShirts;
 
   const { data: dataPants = [] } = await getProduct<IProduct[]>(
     "/products?categoryId=2"
   );
-  pants = dataPants;
+  dataPants;
 
   const { data: dataCaps = [] } = await getProduct<IProduct[]>(
     "/products?categoryId=3"
   );
-  caps = dataCaps;
+  dataCaps;
 
   const { data: dataSets = [] } = await getProduct<IProduct[]>(
     "/products?categoryId=4"
   );
-  sets = dataSets;
+  dataSets;
 
   const { data: dataOptions = [] } = await getProduct<IOption[]>("/options");
-  options = dataOptions;
+  dataOptions;
 
   const { data: dataLandingBaner = [] } = await getProduct<IBanner[]>(
     "/banners"
   );
-  landingBaner = dataLandingBaner;
+  dataLandingBaner;
 
   return (
     <>
@@ -226,7 +219,7 @@ export default async function LandingPage() {
       )}
 
       {/* بنر وسطی */}
-      {landingBaner?.[0] && (
+      {dataLandingBaner?.[0] && (
         <Container sx={{ width: "100%", height: "200px", pt: "20px" }}>
           <CardMedia
             sx={{
@@ -236,8 +229,8 @@ export default async function LandingPage() {
               height: "100%",
             }}
             component="img"
-            image={landingBaner[0].src}
-            alt={landingBaner[0].alt}
+            image={dataLandingBaner[0].src}
+            alt={dataLandingBaner[0].alt}
           />
         </Container>
       )}
