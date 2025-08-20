@@ -58,6 +58,8 @@ export default async function HomePage() {
     options,
     landingBaner,
   });
+  alert("TEST");
+  console.log("TEST");
 
   return (
     <>
