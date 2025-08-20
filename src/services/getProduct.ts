@@ -52,12 +52,13 @@ export const getProduct = async <T>(
   endpoint: string
 ): Promise<{ data: T; error: string }> => {
   try {
-    // چون API داخلی Next.js هست، نیازی به BASE_URL نداری
     const response = await fetch(endpoint, {
-      cache: "no-store", // یا next: { revalidate: 0 }
+      cache: "no-store", // یا next: { revalidate: 0 } برای جلوگیری از کش
     });
 
-    if (!response.ok) throw new Error("ارتباط با سرور با خطا مواجه شد.");
+    if (!response.ok) {
+      throw new Error("ارتباط با سرور با خطا مواجه شد.");
+    }
 
     const jsonData: unknown = await response.json();
 
