@@ -50,6 +50,14 @@ export default async function HomePage() {
     "/banners"
   );
   landingBaner = dataLandingBaner;
+  console.log({
+    shirts,
+    pants,
+    caps,
+    sets,
+    options,
+    landingBaner,
+  });
 
   return (
     <>
