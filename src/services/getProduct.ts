@@ -52,30 +52,14 @@ export const getProduct = async <T>(
   endpoint: string
 ): Promise<{ data: T; error: string }> => {
   try {
-    const isServer = typeof window === "undefined";
-
-    // سمت سرور: از API_URL
-    // سمت کلاینت: از NEXT_PUBLIC_API_URL
-    const BASE_URL = isServer
-      ? process.env.API_URL
-      : process.env.NEXT_PUBLIC_API_URL;
-
-    if (!BASE_URL) throw new Error("BASE_URL not defined");
-
-    const response = await fetch(`${BASE_URL}${endpoint}`, {
-      cache: "no-store", // چون می‌خوای SSR باشه
+    // چون API داخلی Next.js هست، نیازی به BASE_URL نداری
+    const response = await fetch(endpoint, {
+      cache: "no-store", // یا next: { revalidate: 0 }
     });
 
     if (!response.ok) throw new Error("ارتباط با سرور با خطا مواجه شد.");
 
     const jsonData: unknown = await response.json();
-
-    if (
-      !jsonData ||
-      (typeof jsonData !== "object" && !Array.isArray(jsonData))
-    ) {
-      throw new Error("پاسخ نامعتبر از سرور دریافت شد.");
-    }
 
     return { data: jsonData as T, error: "" };
   } catch (error: unknown) {
