@@ -1,3 +1,4 @@
+"use client";
 import { getProduct } from "@/services/getProduct";
 import { IBanner } from "@/types/banners";
 import { IOption } from "@/types/options";
