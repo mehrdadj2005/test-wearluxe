@@ -99,13 +99,9 @@ export default async function HomePage() {
       )}
 
       {/* لیست محصولات */}
-      {shirts.length > 0 && (
-        <ProductSlider sx={{ pt: "20px" }} data={dataShirts} />
-      )}
-      {caps.length > 0 && <ProductSlider sx={{ pt: "20px" }} data={dataCaps} />}
-      {pants.length > 0 && (
-        <ProductSlider sx={{ pt: "20px" }} data={dataPants} />
-      )}
+      {shirts.length > 0 && <ProductSlider sx={{ pt: "20px" }} data={shirts} />}
+      {caps.length > 0 && <ProductSlider sx={{ pt: "20px" }} data={caps} />}
+      {pants.length > 0 && <ProductSlider sx={{ pt: "20px" }} data={pants} />}
 
       {/* بنر وسطی */}
       {landingBaner?.[0] && (
@@ -124,7 +120,7 @@ export default async function HomePage() {
         </Container>
       )}
 
-      {sets.length > 0 && <ProductSlider sx={{ pt: "20px" }} data={dataSets} />}
+      {sets.length > 0 && <ProductSlider sx={{ pt: "20px" }} data={sets} />}
     </>
   );
 }
